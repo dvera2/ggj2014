@@ -8,9 +8,15 @@ public class AIController : MonoBehaviour
         LEFT, RIGHT
     }
 
+    public enum Behavior
+    {
+        PACE, WALKFORWARD
+    }
+
     private Character character;
     public Direction direction = Direction.LEFT;
-    public float paceDistance = 5f;
+    public Behavior behavior = Behavior.PACE;
+    public float paceDistance = 0.5f;
     private float startX;
 
 	// Use this for initialization
@@ -23,19 +29,33 @@ public class AIController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        float movement = GetComponent<Character>().moveSpeed;
-        if(direction == Direction.LEFT)
-        {
-            movement = -movement;
-        }
+        float movement = 1;
+        if (direction == Direction.LEFT) movement = -1;
         character.move(movement);
-        if (startX - transform.position.x >= paceDistance)
+
+        if (behavior == Behavior.WALKFORWARD)
         {
-            direction = Direction.RIGHT;
+
         }
-        else if (transform.position.x - startX >= paceDistance)
+        else if (behavior == Behavior.PACE)
         {
-            direction = Direction.LEFT;
+            if (startX - transform.position.x >= paceDistance)
+            {
+                direction = Direction.RIGHT;
+            }
+            else if (transform.position.x - startX >= paceDistance)
+            {
+                direction = Direction.LEFT;
+            }
         }
 	}
+
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.tag == "Player")
+        {
+            GameObject.Destroy(gameObject);
+            collider.gameObject.GetComponent<Character>().jump();
+        }
+    }
 }
