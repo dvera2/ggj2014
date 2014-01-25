@@ -68,6 +68,7 @@ public class LevelLoader : MonoBehaviour {
 	// Use this for initialization
 	void Load () 
 	{
+        Debug.Log("Load method called");
 		XmlDocument xmlDoc = new XmlDocument ();
 		xmlDoc.LoadXml (LevelXMLFile.text);
 
