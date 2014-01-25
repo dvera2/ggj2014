@@ -109,6 +109,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: 715bda9116242474b9cb27757aa0fe49, type: 3}
   - {fileID: 21300004, guid: 715bda9116242474b9cb27757aa0fe49, type: 3}
   - {fileID: 21300006, guid: 715bda9116242474b9cb27757aa0fe49, type: 3}
+  generateSet: 0
 --- !u!4 &391699464
 Transform:
   m_ObjectHideFlags: 0
@@ -153,6 +154,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8bd6805c32461c44fa074493984135c5, type: 2}
       propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8bd6805c32461c44fa074493984135c5, type: 2}
+      propertyPath: reload
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8bd6805c32461c44fa074493984135c5, type: 2}
+      propertyPath: testClearChildren
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8bd6805c32461c44fa074493984135c5, type: 2}
+      propertyPath: generateSet
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
