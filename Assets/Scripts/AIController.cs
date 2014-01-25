@@ -9,30 +9,33 @@ public class AIController : MonoBehaviour
     }
 
     private Character character;
-    public float speed = 2f;
     public Direction direction = Direction.LEFT;
-    public float paceDistance = 10f;
-    private float currentPaceDistance = 0f;
+    public float paceDistance = 5f;
+    private float startX;
 
 	// Use this for initialization
     void Start()
     {
         character = GetComponent<Character>();
+        startX = transform.position.x;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        float movement = speed * Time.deltaTime;
+        float movement = GetComponent<Character>().moveSpeed;
         if(direction == Direction.LEFT)
         {
-            movement = Math.Max(-movement, -(paceDistance - currentPaceDistance));
+            movement = -movement;
         }
-        else
+        character.move(movement);
+        if (startX - transform.position.x >= paceDistance)
         {
-            movement = Math.Min(movement, paceDistance - currentPaceDistance);
+            direction = Direction.RIGHT;
         }
-        currentPaceDistance += movement;
-        character.move(speed);
+        else if (transform.position.x - startX >= paceDistance)
+        {
+            direction = Direction.LEFT;
+        }
 	}
 }
