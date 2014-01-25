@@ -1,29 +1,28 @@
 <level width="1200" height="600">
   <main tileset="platforms" exportMode="XML">
     <tile x="0" y="24" id="0" />
-    <tile x="1" y="20" id="3" />
     <tile x="1" y="24" id="0" />
-    <tile x="2" y="20" id="3" />
     <tile x="2" y="23" id="0" />
     <tile x="2" y="24" id="0" />
     <tile x="3" y="23" id="0" />
     <tile x="3" y="24" id="0" />
     <tile x="4" y="23" id="0" />
     <tile x="4" y="24" id="0" />
+    <tile x="5" y="22" id="4" />
     <tile x="5" y="23" id="0" />
     <tile x="5" y="24" id="0" />
+    <tile x="6" y="21" id="4" />
+    <tile x="6" y="22" id="4" />
     <tile x="6" y="23" id="0" />
     <tile x="6" y="24" id="0" />
-    <tile x="7" y="20" id="2" />
-    <tile x="7" y="21" id="2" />
-    <tile x="7" y="22" id="2" />
-    <tile x="7" y="23" id="2" />
-    <tile x="7" y="24" id="2" />
-    <tile x="8" y="20" id="2" />
-    <tile x="8" y="21" id="2" />
-    <tile x="8" y="22" id="2" />
-    <tile x="8" y="23" id="2" />
-    <tile x="8" y="24" id="2" />
+    <tile x="7" y="21" id="4" />
+    <tile x="7" y="22" id="4" />
+    <tile x="7" y="23" id="4" />
+    <tile x="7" y="24" id="4" />
+    <tile x="8" y="21" id="4" />
+    <tile x="8" y="22" id="4" />
+    <tile x="8" y="23" id="4" />
+    <tile x="8" y="24" id="4" />
     <tile x="9" y="24" id="3" />
     <tile x="10" y="24" id="3" />
     <tile x="11" y="24" id="3" />
@@ -48,7 +47,6 @@
     <tile x="30" y="24" id="3" />
     <tile x="31" y="24" id="3" />
     <tile x="32" y="24" id="3" />
-    <tile x="33" y="22" id="1" />
     <tile x="33" y="23" id="1" />
     <tile x="33" y="24" id="1" />
     <tile x="34" y="23" id="1" />

@@ -13,7 +13,7 @@ public class LevelLoader : MonoBehaviour {
 
 	public bool generateSet = false;
 
-	private const float tileScale = 0.24f;
+	private const float tileScale = 0.99f;
 	private Transform tileSet;
 
 	/// <summary>
@@ -92,6 +92,8 @@ public class LevelLoader : MonoBehaviour {
 					}
 				}
 
+				int currentBoxColliderY = -1;
+
 				foreach(XmlNode tile in tiles)
 				{
 					if(tile.Name == "tile")
@@ -100,8 +102,9 @@ public class LevelLoader : MonoBehaviour {
 						float y = maxTileY - float.Parse( tile.Attributes["y"].Value );
 						int tileId = int.Parse(tile.Attributes["id"].Value);
 
-						x *= tileScale;
-						y *= tileScale;
+						// Scale slightly to avoid gaps in tiles
+						//x *= tileScale;
+						//y *= tileScale;
 
 						GameObject newTile = GameObject.Instantiate(Tile, new Vector3(x, y, 0.0f), Quaternion.identity) as GameObject;
 						newTile.transform.parent = tileSet.transform;
