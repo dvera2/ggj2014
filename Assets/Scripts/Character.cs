@@ -11,7 +11,7 @@ public class Character : MonoBehaviour {
     public float moveSpeed = 2.5f;
 
     Vector2 moveDir;
-    Size size;
+    public Size size;
 
     void Update()
     {
