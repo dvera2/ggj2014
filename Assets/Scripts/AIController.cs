@@ -62,12 +62,15 @@ public class AIController : MonoBehaviour
         }
 	}
 
-    void OnTriggerEnter2D(Collider2D collider)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collider.tag == "Player")
+        foreach (ContactPoint2D contact in collision.contacts)
         {
-            GameObject.Destroy(gameObject);
-            collider.gameObject.GetComponent<Character>().jump();
+            if (contact.collider.tag == "Player" && Math.Abs(contact.normal.x) < -contact.normal.y)
+            {
+                GameObject.Destroy(gameObject);
+                contact.collider.GetComponent<Character>().jump();
+            }
         }
     }
 }
