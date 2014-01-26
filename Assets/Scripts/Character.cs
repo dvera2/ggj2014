@@ -27,6 +27,10 @@ public class Character : MonoBehaviour {
     bool resizing = false;
     bool gettingbigger = false;
 
+	public AudioClip jumpAudio;
+	public AudioClip growAudio;
+	public AudioClip shrinkAudio;
+
     void Start()
     {
         moveSpeed = moveSpeedSmall;
@@ -37,6 +41,12 @@ public class Character : MonoBehaviour {
 
     void Update()
     {
+		// check input for first time jump is hit for audio to play
+		if (Input.GetButtonDown ("Jump") && Math.Abs(rigidbody2D.velocity.y) < 0.1f) 
+		{
+			GetComponent<AudioSource>().PlayOneShot(jumpAudio);
+		}
+
         if (gameObject.tag == "Player")
         {
             move(InputManager.HorizAxis);
@@ -134,6 +144,8 @@ public class Character : MonoBehaviour {
         if (size == Size.LARGE) changeSize(Size.MEDIUM);
         else if (size == Size.MEDIUM) changeSize(Size.SMALL);
         else if (size == Size.SMALL) GetComponent<PlayerDeath>().die();
+
+		GetComponent<AudioSource>().PlayOneShot(shrinkAudio);
     }
 
     public void makeFatter()
@@ -141,6 +153,8 @@ public class Character : MonoBehaviour {
         if (size == Size.SMALL) changeSize(Size.MEDIUM);
         else if (size == Size.MEDIUM) changeSize(Size.LARGE);
         else if (size == Size.LARGE) GetComponent<PlayerDeath>().die();
+
+		GetComponent<AudioSource>().PlayOneShot(growAudio);
     }
 
     public void forceSmall()

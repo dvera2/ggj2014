@@ -14,10 +14,14 @@ public class Boss : MonoBehaviour {
         {
             delayTimer = 0f;
             Instantiate(projectile, new Vector3(transform.position.x - 2.5f, transform.position.y + 2f, 0f), Quaternion.identity);
+            GetComponentInChildren<CthjujuAnimController>().actionState = CthjujuAnimController.ActionState.Attack;
+        }
+        if (!dying && delayTimer >= projectileDelay / 4)
+        {
+            GetComponentInChildren<CthjujuAnimController>().actionState = CthjujuAnimController.ActionState.Idle;
         }
         else if (dying)
-        {
-            velocity.x += Random.Range(-.4f, .4f);
+        {;
             transform.Translate(velocity);
         }
 	}
@@ -26,9 +30,10 @@ public class Boss : MonoBehaviour {
     {
         if (collider.tag != "Player" && collider.name != "Projectile")
         {
-            velocity.y = -3f;
+            velocity.y = -.5f;
             dying = true;
             (GameObject.FindGameObjectWithTag("Player").GetComponent<Character>()).forceSmall();
+            GetComponentInChildren<CthjujuAnimController>().actionState = CthjujuAnimController.ActionState.Die;
         }
     }
 }
