@@ -30,7 +30,7 @@ public class Credits : MonoBehaviour {
 		AddName ("Devlyn JD");
 
 		AddTabs(2);
-		AddTitle ("MUSIC");
+		AddTitle ("MUSIC AND ANIMATION");
 		AddTabs(2);
 		AddName("Dave Vera");
 
