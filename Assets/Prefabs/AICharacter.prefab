@@ -80,8 +80,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7086825cdfc5bd44aa3d5da2680c4228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 5
-  moveSpeed: 1
+  jumpSpeedSmall: 8.5
+  moveSpeedSmall: 5
+  jumpSpeedMedium: 6.5
+  moveSpeedMedium: 4
+  jumpSpeedLarge: 5
+  moveSpeedLarge: 2
+  boxSizeSmall: 1
+  boxSizeMedium: 2
+  boxSizeLarge: 3
+  resizeRate: .00999999978
+  baseHeight: 0
+  checkpointTemplate: {fileID: 0}
   size: 0
 --- !u!114 &11400002
 MonoBehaviour:
@@ -97,6 +107,7 @@ MonoBehaviour:
   direction: 0
   behavior: 0
   paceDistance: 1
+  particleSystemPrefab: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

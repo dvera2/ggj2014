@@ -7,16 +7,11 @@
 *.unityproj
 *.sln
 *.suo
-ProjectSettings/AudioManager.asset
 ProjectSettings/DynamicsManager.asset
 ProjectSettings/EditorBuildSettings.asset
 ProjectSettings/GraphicsSettings.asset
-ProjectSettings/InputManager.asset
 ProjectSettings/NavMeshLayers.asset
 ProjectSettings/NetworkManager.asset
-ProjectSettings/Physics2DSettings.asset
 ProjectSettings/ProjectSettings.asset
 ProjectSettings/QualitySettings.asset
-ProjectSettings/TagManager.asset
-ProjectSettings/TimeManager.asset
 ggj2014.userprefs
