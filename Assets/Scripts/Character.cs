@@ -22,7 +22,6 @@ public class Character : MonoBehaviour {
     float jumpSpeed;
 
     Vector2 moveDir;
-    Size size;
     bool resizing = false;
     bool gettingbigger = false;
 
@@ -31,6 +30,7 @@ public class Character : MonoBehaviour {
         moveSpeed = moveSpeedSmall;
         jumpSpeed = jumpSpeedSmall;
     }
+    public Size size;
 
     void Update()
     {
@@ -117,11 +117,13 @@ public class Character : MonoBehaviour {
     {
         if (size == Size.LARGE) changeSize(Size.MEDIUM);
         else if (size == Size.MEDIUM) changeSize(Size.SMALL);
+        else if (size == Size.SMALL) GetComponent<PlayerDeath>().die();
     }
 
     public void makeFatter()
     {
         if (size == Size.SMALL) changeSize(Size.MEDIUM);
         else if (size == Size.MEDIUM) changeSize(Size.LARGE);
+        else if (size == Size.LARGE) GetComponent<PlayerDeath>().die();
     }
 }
