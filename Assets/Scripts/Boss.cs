@@ -2,7 +2,7 @@
 
 public class Boss : MonoBehaviour {
     public float projectileDelay = 2f;
-    private float delayTimer = 0f;
+    private float delayTimer = -3f;
     public Transform projectile;
     private bool dying = false;
     private Vector2 velocity = new Vector2(0f, 0f);
@@ -22,7 +22,7 @@ public class Boss : MonoBehaviour {
         }
 	}
 
-    void OnTiggerEnter2D(Collider2D collider)
+    void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.tag != "Player" && collider.name != "Projectile")
         {

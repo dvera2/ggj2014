@@ -5,7 +5,7 @@ public class Projectile : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        rigidbody2D.velocity = new Vector2(speed, Random.Range(0f, 10f));
+        rigidbody2D.velocity = new Vector2(speed, Random.Range(-5f, 5f));
 	}
 
     void Update()
