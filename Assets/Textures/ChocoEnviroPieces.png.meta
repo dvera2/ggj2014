@@ -1,0 +1,117 @@
+fileFormatVersion: 2
+guid: 50e465639c0a0e742ad4f1223f758c46
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: GodRay
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 170
+        width: 688
+        height: 606
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Eye2
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 762
+        width: 68
+        height: 93
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Eye1
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 760
+        width: 59
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Mouth_Smile
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 638
+        width: 176
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sun
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 547
+        width: 247
+        height: 250
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Cloud1
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 328
+        width: 305
+        height: 179
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Cloud2
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 16
+        width: 377
+        height: 321
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Cloud3
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 21
+        width: 377
+        height: 330
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 
