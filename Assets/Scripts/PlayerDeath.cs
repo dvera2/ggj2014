@@ -14,7 +14,7 @@ public class PlayerDeath : MonoBehaviour {
         foreach(ContactPoint2D contact in collision.contacts)
         {
             if (contact.collider.tag == "Trap") die();
-            else if (contact.collider.tag == "Enemy" && Math.Abs(contact.normal.x) > contact.normal.y) die();
+            else if (contact.collider.tag == "Enemy" && contact.collider.transform.position.y > GetComponent<Character>().baseHeight) die();
         }
     }
 
