@@ -10,7 +10,7 @@ public class AIController : MonoBehaviour
 
     public enum Behavior
     {
-        PACE, WALKFORWARD
+        PACE, WALKFORWARD, CHASE
     }
 
     private Character character;
@@ -31,7 +31,8 @@ public class AIController : MonoBehaviour
     {
         float movement = 1;
         if (direction == Direction.LEFT) movement = -1;
-        character.move(movement);
+        if (Math.Abs(transform.position.x - GameObject.Find("Player").transform.position.x) < 30f)
+            character.move(movement);
 
         if (behavior == Behavior.WALKFORWARD)
         {
@@ -48,14 +49,30 @@ public class AIController : MonoBehaviour
                 direction = Direction.LEFT;
             }
         }
+        else if(behavior == Behavior.CHASE)
+        {
+            if(transform.position.x - GameObject.Find("Player").transform.position.x > 0)
+            {
+                direction = Direction.LEFT;
+            }
+            else
+            {
+                direction = Direction.RIGHT;
+            }
+        }
 	}
 
-    void OnTriggerEnter2D(Collider2D collider)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collider.tag == "Player")
+        foreach (ContactPoint2D contact in collision.contacts)
         {
-            GameObject.Destroy(gameObject);
-            collider.gameObject.GetComponent<Character>().jump();
+            if (contact.collider.tag == "Player" && Math.Abs(contact.normal.x) < -contact.normal.y)
+            {
+                Character.Size otherSize = contact.collider.GetComponent<Character>().size;
+                Character.Size size = GetComponent<Character>().size;
+                if(size == otherSize || otherSize == Character.Size.LARGE || size == Character.Size.MEDIUM) GameObject.Destroy(gameObject);
+                contact.collider.GetComponent<Character>().jump();
+            }
         }
     }
 }
