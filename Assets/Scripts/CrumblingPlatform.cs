@@ -9,6 +9,7 @@ public class CrumblingPlatform : MonoBehaviour {
     }
 
     public Strength strength = Strength.WEAK;
+    public GameObject particleSystemPrefab;
 
 	void Start () {
 	    
@@ -24,7 +25,10 @@ public class CrumblingPlatform : MonoBehaviour {
                 if ((strength == Strength.MEDIUM && contact.collider.GetComponent<Character>().size == Character.Size.LARGE)
                     || (strength == Strength.WEAK && contact.collider.GetComponent<Character>().size != Character.Size.SMALL))
                 {
-                    // TODO: particles here
+                    GameObject particles = Instantiate(particleSystemPrefab, contact.point, Quaternion.identity) as GameObject;
+                    particles.GetComponent<ParticleSystem>().Emit(50);
+                    particles.GetComponent<ParticleSystem>().renderer.sortingLayerName = "particles";
+                    Destroy(particles, 2f);
                     renderer.enabled = false;
                     gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 }
