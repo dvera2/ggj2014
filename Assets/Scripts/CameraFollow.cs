@@ -19,9 +19,6 @@ public class CameraFollow : MonoBehaviour {
 		var pos = transform.position;
 		pos.x = Mathf.SmoothDamp(pos.x, target.position.x, ref vel, smoothTime);
 		pos.y = Mathf.SmoothDamp(pos.y, target.position.y, ref velY, smoothTime);
-		Debug.Log(string.Format("{0}, {1}", pos.x, pos.y));
 		transform.position = pos;
-
-		Debug.Log (string.Format ("{0}, {1}", transform.position.x, transform.position.y));
 	}
 }
