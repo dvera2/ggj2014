@@ -8,7 +8,6 @@
 *.sln
 *.suo
 ProjectSettings/DynamicsManager.asset
-ProjectSettings/EditorBuildSettings.asset
 ProjectSettings/GraphicsSettings.asset
 ProjectSettings/NavMeshLayers.asset
 ProjectSettings/NetworkManager.asset
