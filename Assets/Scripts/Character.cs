@@ -19,8 +19,6 @@ public class Character : MonoBehaviour {
     float resizeRate = 0.01f;
     public float baseHeight;
 
-    public Transform checkpointTemplate;
-
     float moveSpeed;
     float jumpSpeed;
 
@@ -32,7 +30,7 @@ public class Character : MonoBehaviour {
     {
         moveSpeed = moveSpeedSmall;
         jumpSpeed = jumpSpeedSmall;
-        GameObject.Instantiate(checkpointTemplate, new Vector3(transform.position.x - 2, transform.position.y - 2, transform.position.z), Quaternion.identity);
+        //GameObject.Instantiate(checkpointTemplate, new Vector3(transform.position.x - 2, transform.position.y - 2, transform.position.z), Quaternion.identity);
     }
     public Size size;
 
@@ -93,7 +91,6 @@ public class Character : MonoBehaviour {
     {
         if (s == Size.LARGE)
         {
-            Debug.Log("Changing character to large.");
             moveSpeed = moveSpeedLarge;
             jumpSpeed = jumpSpeedLarge;
             // TODO: call animation
@@ -102,7 +99,6 @@ public class Character : MonoBehaviour {
         }
         else if (s == Size.MEDIUM)
         {
-            Debug.Log("Changing character to medium.");
             moveSpeed = moveSpeedMedium;
             jumpSpeed = jumpSpeedMedium;
             // TODO: call animation
@@ -112,7 +108,6 @@ public class Character : MonoBehaviour {
         }
         else if (s == Size.SMALL)
         {
-            Debug.Log("Changing character to small.");
             moveSpeed = moveSpeedSmall;
             jumpSpeed = jumpSpeedSmall;
             // TODO: call animation
@@ -135,5 +130,14 @@ public class Character : MonoBehaviour {
         if (size == Size.SMALL) changeSize(Size.MEDIUM);
         else if (size == Size.MEDIUM) changeSize(Size.LARGE);
         else if (size == Size.LARGE) GetComponent<PlayerDeath>().die();
+    }
+
+    public void forceSmall()
+    {
+        size = Size.SMALL;
+        resizing = false;
+        (gameObject.GetComponent<BoxCollider2D>() as BoxCollider2D).size = new Vector2(boxSizeSmall, boxSizeSmall);
+        moveSpeed = moveSpeedSmall;
+        jumpSpeed = jumpSpeedSmall;
     }
 }

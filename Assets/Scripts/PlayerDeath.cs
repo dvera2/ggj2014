@@ -3,10 +3,24 @@ using System;
 
 public class PlayerDeath : MonoBehaviour {
     public bool alive = true;
+    int respawnCount = 0;
 
 	// Update is called once per frame
 	void Update () {
-        if (transform.position.y < -15f) die();
+        if (transform.position.y < -15f)
+        {
+            SpawnScript.levelReset();
+        }
+        if (!alive)
+        {
+            respawnCount++;
+            if (respawnCount == 90)
+            {
+                respawnCount = 0;
+                SpawnScript.levelReset();
+                alive = true;
+            }
+        }
 	}
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -23,8 +37,8 @@ public class PlayerDeath : MonoBehaviour {
         if(alive)
         {
             alive = false;
-			//@Vishnu- Sets the player's position to the last checkpoint
-			SpawnScript.levelReset();
+            gameObject.renderer.enabled = false;
+			//SpawnScript.levelReset();
         }
     }
 }

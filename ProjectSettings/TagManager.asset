@@ -45,6 +45,10 @@ TagManager:
     userID: 1
     uniqueID: 2844212751
     locked: 0
+  - name: Background
+    userID: 2
+    uniqueID: 3514202323
+    locked: 0
   - name: Default
     userID: 0
     uniqueID: 0
