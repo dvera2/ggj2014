@@ -75,6 +75,7 @@ public class Character : MonoBehaviour {
                 resizing = false;
                 b.transform.localScale = new Vector2(boxSizeSmall * facing, boxSizeSmall);
             }
+
         }
         else
         {
@@ -146,7 +147,7 @@ public class Character : MonoBehaviour {
     {
         size = Size.SMALL;
         resizing = false;
-        (gameObject.GetComponent<BoxCollider2D>() as BoxCollider2D).size = new Vector2(boxSizeSmall, boxSizeSmall);
+        gameObject.transform.localScale = new Vector2(boxSizeSmall * facing, boxSizeSmall);
         moveSpeed = moveSpeedSmall;
         jumpSpeed = jumpSpeedSmall;
     }
