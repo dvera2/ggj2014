@@ -23,6 +23,8 @@ public class PlayerDeath : MonoBehaviour {
         if(alive)
         {
             alive = false;
+			//@Vishnu- Sets the player's position to the last checkpoint
+			SpawnScript.levelReset();
         }
     }
 }

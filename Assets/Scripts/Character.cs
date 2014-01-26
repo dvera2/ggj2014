@@ -19,6 +19,8 @@ public class Character : MonoBehaviour {
     public float resizeRate = 0.01f;
     public float baseHeight;
 
+    public Transform checkpointTemplate;
+
     float moveSpeed;
     float jumpSpeed;
 
@@ -30,6 +32,7 @@ public class Character : MonoBehaviour {
     {
         moveSpeed = moveSpeedSmall;
         jumpSpeed = jumpSpeedSmall;
+        GameObject.Instantiate(checkpointTemplate, new Vector3(transform.position.x - 2, transform.position.y - 2, transform.position.z), Quaternion.identity);
     }
     public Size size;
 
@@ -39,6 +42,7 @@ public class Character : MonoBehaviour {
         {
             move(InputManager.HorizAxis);
             if (Math.Abs(rigidbody2D.velocity.y) <= 0.001f && InputManager.JumpDown) jump();
+            if (InputManager.RestartDown) SpawnScript.levelReset();
         }
 
         BoxCollider2D b = gameObject.GetComponent<BoxCollider2D>() as BoxCollider2D;
