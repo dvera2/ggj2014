@@ -19,6 +19,9 @@ public class InputManager : MonoBehaviour
 	void Update ()
     {
         HorizAxis = Input.GetAxis("Horizontal");
+        if (Math.Abs(HorizAxis) > .001f && Math.Abs(rigidbody2D.velocity.y) < .001f) GetComponentInChildren<KingAnimController>().actionState = KingAnimController.ActionState.Walk;
+        else if (Math.Abs(rigidbody2D.velocity.y) > .001f) GetComponentInChildren<KingAnimController>().actionState = KingAnimController.ActionState.Jump;
+        else GetComponentInChildren<KingAnimController>().actionState = KingAnimController.ActionState.Idle;
         if (Math.Abs(rigidbody2D.velocity.y) <= 0.001f && Input.GetButtonDown("Jump")) JumpDown = true;
         else if (Input.GetButtonUp("Jump") || jumpTimer >= MaxJumpTime)
         {
