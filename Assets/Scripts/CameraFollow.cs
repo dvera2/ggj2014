@@ -16,6 +16,9 @@ public class CameraFollow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
+
+		if (!target) return;
+
 		var pos = transform.position;
 		pos.x = Mathf.SmoothDamp(pos.x, target.position.x, ref vel, smoothTime);
 		pos.y = Mathf.SmoothDamp(pos.y, target.position.y, ref velY, smoothTime);
