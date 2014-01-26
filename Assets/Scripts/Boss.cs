@@ -2,7 +2,7 @@
 
 public class Boss : MonoBehaviour {
     public float projectileDelay = 2f;
-    private float delayTimer = 0f;
+    private float delayTimer = -3f;
     public Transform projectile;
     private bool dying = false;
     private Vector2 velocity = new Vector2(0f, 0f);
@@ -13,21 +13,26 @@ public class Boss : MonoBehaviour {
         if(!dying && delayTimer >= projectileDelay)
         {
             delayTimer = 0f;
-            Instantiate(projectile, transform.position, Quaternion.identity);
+            Instantiate(projectile, new Vector3(transform.position.x - 2.5f, transform.position.y + 2f, 0f), Quaternion.identity);
+            GetComponentInChildren<CthjujuAnimController>().actionState = CthjujuAnimController.ActionState.Attack;
+        }
+        if (!dying && delayTimer >= projectileDelay / 4)
+        {
+            GetComponentInChildren<CthjujuAnimController>().actionState = CthjujuAnimController.ActionState.Idle;
         }
         else if (dying)
-        {
-            velocity.x += Random.Range(-.4f, .4f);
+        {;
             transform.Translate(velocity);
         }
 	}
 
-    void OnTiggerEnter2D(Collider2D collider)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.tag != "Player")
+        if (collider.tag != "Player" && collider.name != "Projectile")
         {
-            velocity.y = -3f;
+            velocity.y = -.5f;
             dying = true;
+            GetComponentInChildren<CthjujuAnimController>().actionState = CthjujuAnimController.ActionState.Die;
         }
     }
 }

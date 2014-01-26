@@ -9,7 +9,7 @@ public class PlayerDeath : MonoBehaviour {
 	void Update () {
         if (transform.position.y < -15f)
         {
-            SpawnScript.levelReset();
+            die();
         }
         if (!alive)
         {
@@ -34,6 +34,11 @@ public class PlayerDeath : MonoBehaviour {
 
     public void die()
     {
+        if (StateManager.getCurrentLevel() == "Level4")
+        {
+            StateManager.changeLevel("Level4");
+            return;
+        }
         if(alive)
         {
             alive = false;
