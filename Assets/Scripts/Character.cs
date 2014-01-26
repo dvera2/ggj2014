@@ -17,6 +17,7 @@ public class Character : MonoBehaviour {
     public float boxSizeMedium = 2f;
     public float boxSizeLarge = 3f;
     public float resizeRate = 0.01f;
+    public float baseHeight;
 
     public Transform checkpointTemplate;
 
@@ -44,11 +45,13 @@ public class Character : MonoBehaviour {
             if (InputManager.RestartDown) SpawnScript.levelReset();
         }
 
+        BoxCollider2D b = gameObject.GetComponent<BoxCollider2D>() as BoxCollider2D;
+
         if (resizing)
         {
-            BoxCollider2D b = gameObject.GetComponent<BoxCollider2D>() as BoxCollider2D;
             if (gettingbigger) b.size = new Vector2(b.size.x + resizeRate, b.size.y + resizeRate);
             else b.size = new Vector2(b.size.x - resizeRate, b.size.y - resizeRate);
+            baseHeight = transform.position.y - (b.size.y / 2);
 
             if (size == Size.LARGE && b.size.x >= boxSizeLarge)
             {
@@ -71,6 +74,8 @@ public class Character : MonoBehaviour {
                 b.size = new Vector2(boxSizeSmall, boxSizeSmall);
             }
         }
+
+        baseHeight = transform.position.y - (b.size.y / 2) + 0.01f;
     }
 
     public void move(float speed)
