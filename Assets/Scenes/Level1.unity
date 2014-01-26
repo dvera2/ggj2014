@@ -3880,6 +3880,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 231576787}
   - 95: {fileID: 231576788}
+  - 114: {fileID: 231576789}
   m_Layer: 0
   m_Name: KingRig
   m_TagString: Untagged
@@ -3914,6 +3915,21 @@ Animator:
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
   m_HasTransformHierarchy: 1
+--- !u!114 &231576789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400006, guid: 2b53d12726e945b458f56a902c1c1ae3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1113730260}
+  m_GameObject: {fileID: 231576786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8ccf0494a6009499665729521c6ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 231576788}
+  actionState: 0
+  emoState: 0
 --- !u!1 &234028763
 GameObject:
   m_ObjectHideFlags: 0
@@ -25475,9 +25491,9 @@ GameObject:
   - 50: {fileID: 1614399930}
   - 114: {fileID: 1614399929}
   - 114: {fileID: 1614399928}
-  - 212: {fileID: 1614399927}
   - 114: {fileID: 1614399926}
   - 61: {fileID: 1614399925}
+  - 212: {fileID: 1614399927}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -25544,7 +25560,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 075acf01748a26343b2bf6d8780f902e, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1614399928
 MonoBehaviour:

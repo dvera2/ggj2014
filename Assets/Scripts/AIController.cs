@@ -10,7 +10,7 @@ public class AIController : MonoBehaviour
 
     public enum Behavior
     {
-        PACE, WALKFORWARD, CHASE
+        PACE, WALKFORWARD, CHASE, RUN
     }
 
     private Character character;
@@ -33,6 +33,7 @@ public class AIController : MonoBehaviour
     {
         float movement = 1;
         if (direction == Direction.LEFT) movement = -1;
+        if (behavior != Behavior.PACE) movement *= 1.5f;
         if (Math.Abs(transform.position.x - GameObject.Find("Player").transform.position.x) < 30f)
             character.move(movement);
 
@@ -62,6 +63,28 @@ public class AIController : MonoBehaviour
                 direction = Direction.RIGHT;
             }
         }
+        else if (behavior == Behavior.RUN)
+        {
+            if (transform.position.x - GameObject.Find("Player").transform.position.x < 0)
+            {
+                direction = Direction.LEFT;
+            }
+            else
+            {
+                direction = Direction.RIGHT;
+            }
+        }
+        if (GameObject.Find("Player").GetComponent<Character>().size == Character.Size.LARGE)
+            GetComponentInChildren<SchnopAnimController>().emoState = SchnopAnimController.EmoState.Scared;
+        if (GameObject.Find("Player").GetComponent<Character>().size == Character.Size.MEDIUM)
+            GetComponentInChildren<SchnopAnimController>().emoState = SchnopAnimController.EmoState.Neutral;
+        if (GameObject.Find("Player").GetComponent<Character>().size == Character.Size.SMALL)
+            GetComponentInChildren<SchnopAnimController>().emoState = SchnopAnimController.EmoState.Mad;
+
+        if (Math.Abs(GameObject.Find("Player").transform.position.x - transform.position.x) < 8f &&
+            GameObject.Find("Player").GetComponent<Character>().size == Character.Size.LARGE) behavior = Behavior.RUN;
+        else if (Math.Abs(GameObject.Find("Player").transform.position.x - transform.position.x) < 4f) behavior = Behavior.CHASE;
+        else behavior = Behavior.PACE;
 	}
 
     void OnDisable()
@@ -84,7 +107,15 @@ public class AIController : MonoBehaviour
                 contact.collider.GetComponent<Character>().jump();
                 Character.Size otherSize = contact.collider.GetComponent<Character>().size;
                 Character.Size size = GetComponent<Character>().size;
-                if (size == otherSize || otherSize == Character.Size.LARGE || size == Character.Size.SMALL) GameObject.Destroy(gameObject);
+                if (size == otherSize || otherSize == Character.Size.LARGE || size == Character.Size.SMALL)
+                {
+                    GetComponentInChildren<SchnopAnimController>().actionState = SchnopAnimController.ActionState.Die;
+                    GameObject.Destroy(gameObject, .5f);
+                }
+            }
+            else if (contact.collider.tag == "Player")
+            {
+                GetComponentInChildren<SchnopAnimController>().actionState = SchnopAnimController.ActionState.Hit;
             }
         }
     }
