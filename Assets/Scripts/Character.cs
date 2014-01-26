@@ -54,11 +54,13 @@ public class Character : MonoBehaviour {
     {
         if (size == Size.LARGE) changeSize(Size.MEDIUM);
         else if (size == Size.MEDIUM) changeSize(Size.SMALL);
+        else if (size == Size.SMALL) GetComponent<PlayerDeath>().die();
     }
 
     public void makeFatter()
     {
         if (size == Size.SMALL) changeSize(Size.MEDIUM);
         else if (size == Size.MEDIUM) changeSize(Size.LARGE);
+        else if (size == Size.LARGE) GetComponent<PlayerDeath>().die();
     }
 }

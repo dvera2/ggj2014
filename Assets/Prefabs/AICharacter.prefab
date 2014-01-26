@@ -16,7 +16,7 @@ GameObject:
   - 61: {fileID: 6100002}
   m_Layer: 0
   m_Name: AICharacter
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,6 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpSpeed: 5
   moveSpeed: 1
+  size: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

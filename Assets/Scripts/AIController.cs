@@ -10,7 +10,7 @@ public class AIController : MonoBehaviour
 
     public enum Behavior
     {
-        PACE, WALKFORWARD
+        PACE, WALKFORWARD, CHASE
     }
 
     private Character character;
@@ -31,7 +31,8 @@ public class AIController : MonoBehaviour
     {
         float movement = 1;
         if (direction == Direction.LEFT) movement = -1;
-        character.move(movement);
+        if (Math.Abs(transform.position.x - GameObject.Find("Player").transform.position.x) < 30f)
+            character.move(movement);
 
         if (behavior == Behavior.WALKFORWARD)
         {
@@ -46,6 +47,17 @@ public class AIController : MonoBehaviour
             else if (transform.position.x - startX >= paceDistance)
             {
                 direction = Direction.LEFT;
+            }
+        }
+        else if(behavior == Behavior.CHASE)
+        {
+            if(transform.position.x - GameObject.Find("Player").transform.position.x > 0)
+            {
+                direction = Direction.LEFT;
+            }
+            else
+            {
+                direction = Direction.RIGHT;
             }
         }
 	}
