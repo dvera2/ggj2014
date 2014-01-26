@@ -3,8 +3,8 @@ guid: 733965ba0800d3f4582791c0837afd68
 TextureImporter:
   serializedVersion: 2
   mipmaps:
-    mipMapMode: 0
-    enableMipMap: 1
+    mipMapMode: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -20,26 +20,134 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  alphaIsTransparency: 1
+  textureType: 5
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: EyePupil
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 820
+        width: 27
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: HappyEye
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 800
+        width: 92
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: MadEye
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 805
+        width: 87
+        height: 67
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EyeDazed
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 788
+        width: 94
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Flatten
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 897
+        width: 378
+        height: 104
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Brow
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 653
+        width: 136
+        height: 84
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: MouthNeutral
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 594
+        width: 239
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Mouth_Scared
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 507
+        width: 239
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Mouth_Mad
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 384
+        width: 241
+        height: 66
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Brow_Scared
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 401
+        width: 85
+        height: 88
+      alignment: 9
+      pivot: {x: -.232674986, y: 1.07410085}
+    - name: Brow_Mad
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 610
+        width: 91
+        height: 172
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Base
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 536
+        width: 261
+        height: 264
+      alignment: 0
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 

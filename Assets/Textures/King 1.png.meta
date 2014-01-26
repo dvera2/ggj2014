@@ -4,7 +4,7 @@ TextureImporter:
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -41,7 +41,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: King 1_0
+    - name: King_Head
       rect:
         serializedVersion: 2
         x: 33
@@ -50,7 +50,7 @@ TextureImporter:
         height: 241
       alignment: 9
       pivot: {x: .572217226, y: .447859764}
-    - name: King 1_1
+    - name: King_Arm
       rect:
         serializedVersion: 2
         x: 240
@@ -59,7 +59,7 @@ TextureImporter:
         height: 213
       alignment: 9
       pivot: {x: .751154482, y: .816424847}
-    - name: King 1_2
+    - name: King_Body
       rect:
         serializedVersion: 2
         x: 12
@@ -68,7 +68,7 @@ TextureImporter:
         height: 256
       alignment: 9
       pivot: {x: .549277663, y: .607095063}
-    - name: King 1_3
+    - name: King_Foot
       rect:
         serializedVersion: 2
         x: 280
