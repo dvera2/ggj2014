@@ -160,12 +160,7 @@ MonoBehaviour:
   moveSpeedMedium: 4
   jumpSpeedLarge: 5
   moveSpeedLarge: 2
-  boxSizeSmall: 1
-  boxSizeMedium: 2
-  boxSizeLarge: 3
-  resizeRate: .00999999978
   baseHeight: 0
-  checkpointTemplate: {fileID: 400000, guid: 113cd253432c17a42885b47d30c03722, type: 2}
   size: 0
 --- !u!114 &11400004
 MonoBehaviour:

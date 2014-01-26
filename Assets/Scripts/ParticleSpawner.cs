@@ -7,7 +7,7 @@ public class ParticleSpawner : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("test");
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && renderer.enabled)
         {
             GameObject particles = Instantiate(particleSystemPrefab, transform.position, Quaternion.identity) as GameObject;
             particles.GetComponent<ParticleSystem>().Emit(50);
