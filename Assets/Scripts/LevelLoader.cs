@@ -10,12 +10,19 @@ public class LevelLoader : MonoBehaviour {
 	public TextAsset LevelXMLFile;
 	public GameObject Tile;
 	public Sprite[] TileSprites;
+	public string IntroQuote;
 
 	public bool generateSet = false;
 
 	private const int tileSize = 24;
 	private const float tileScale = 0.99f;
 	private Transform tileSet;
+
+	private const float textPrintRate = 0.05f;
+	private float showLevelIntroTimer = 6.0f;
+	private Texture2D blackTexture;
+	private string currentIntroQuote;
+	public GUIStyle quoteStyle = new GUIStyle();
 
 	/// <summary>
 	/// Attaches to or creates a collection transform to store generated tiles.
@@ -36,7 +43,15 @@ public class LevelLoader : MonoBehaviour {
 	}
 
 	void Start() {
+		showLevelIntroTimer = 6.0f;
+		blackTexture = new Texture2D (1, 1);
+		blackTexture.SetPixel (0, 0, Color.black);
+		blackTexture.Apply ();
+		currentIntroQuote = "";
 
+		quoteStyle.font.name = "courier";
+
+		PrintQuote ();
 	}
 
 	void Update() {
@@ -162,6 +177,31 @@ public class LevelLoader : MonoBehaviour {
 					}
 				}
 			}
+		}
+	}
+
+	void PrintQuote()
+	{
+		StartCoroutine( WaitForPrint() );
+	}
+
+	IEnumerator WaitForPrint()
+	{
+		for (int i = 0; i < IntroQuote.Length; i++) 
+		{
+			currentIntroQuote += IntroQuote[i];
+			yield return new WaitForSeconds (textPrintRate);
+		}
+	}
+
+	void OnGUI()
+	{
+		showLevelIntroTimer -= Time.deltaTime;
+
+		if (showLevelIntroTimer > 0.0f) 
+		{
+			GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), blackTexture);
+			GUI.Label(new Rect(0, 0, Screen.width, Screen.height), currentIntroQuote, quoteStyle);
 		}
 	}
 }
