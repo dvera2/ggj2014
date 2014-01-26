@@ -515,7 +515,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayer: 0
-  m_SortingOrder: 8
+  m_SortingOrder: 11
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300002, guid: 2c2d3e074c06985419b473eeba9a2bc1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1548,6 +1548,10 @@ Prefab:
     - target: {fileID: 400014, guid: 2527886765bd1084f9b29729713829df, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 2527886765bd1084f9b29729713829df, type: 2}
+      propertyPath: m_SortingOrder
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2527886765bd1084f9b29729713829df, type: 2}
