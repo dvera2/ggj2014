@@ -12,7 +12,7 @@ public class Character : MonoBehaviour {
     public float jumpSpeedMedium = 6.5f;
     public float moveSpeedMedium = 4f;
     public float jumpSpeedLarge = 5f;
-    public float moveSpeedLarge = 2f;
+    public float moveSpeedLarge = 2.5f;
     float boxSizeSmall = 0.9f;
     float boxSizeMedium = 1.9f;
     float boxSizeLarge = 2.9f;
