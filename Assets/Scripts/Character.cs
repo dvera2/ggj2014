@@ -41,7 +41,7 @@ public class Character : MonoBehaviour {
         if (gameObject.tag == "Player")
         {
             move(InputManager.HorizAxis);
-            if (Math.Abs(rigidbody2D.velocity.y) <= 0.001f && InputManager.JumpDown) jump();
+            if (InputManager.JumpDown) jump();
             if (InputManager.RestartDown) SpawnScript.levelReset();
         }
 
@@ -85,7 +85,8 @@ public class Character : MonoBehaviour {
 
     public void jump()
     {
-        rigidbody2D.velocity = new Vector2(0f, jumpSpeed);
+        if (rigidbody2D.velocity.y < jumpSpeed / 4) rigidbody2D.velocity += new Vector2(0f, jumpSpeed) / 4;
+        else rigidbody2D.velocity += new Vector2(0f, jumpSpeed) / 20;
     }
 
     public void changeSize(Size s)
