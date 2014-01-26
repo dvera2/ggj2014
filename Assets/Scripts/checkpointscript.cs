@@ -18,7 +18,7 @@ public class checkpointscript : MonoBehaviour {
 		//Init variables
 		isReached = false;
 
-        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        gameObject.renderer.enabled = false;
 	}
 	
 	// Update is called once per frame

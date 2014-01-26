@@ -6,26 +6,25 @@ public class SpawnScript : MonoBehaviour {
 	public static GameObject player;
     public static Vector3 spawnpos;
 
-	// Use this for initialization
+    public Transform checkpointTemplate;
+
 	void Start () {
-		Debug.Log ("SpawnScript running!");
-		player = GameObject.FindGameObjectWithTag ("Player");
-		player.transform.position = (transform.position);
+		player = GameObject.FindGameObjectWithTag("Player");
+		//player.transform.position = (transform.position);
+        GameObject.Instantiate(checkpointTemplate, new Vector3(transform.position.x - 2, transform.position.y - 2, transform.position.z), Quaternion.identity);
+
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		//player = GameObject.FindGameObjectWithTag ("Player");
-		//player.transform.TransformPoint (transform.position);
-	}
 
-	/**
-		Called when the player dies or the level is reset;
-		sets the player's position to spawnpos
-	 */
 	public static void levelReset() {
         player.transform.position = new Vector3(spawnpos.x, spawnpos.y, player.transform.position.z);
-        
+        player.renderer.enabled = true;
+        player.gameObject.GetComponent<Character>().forceSmall();
+        player.gameObject.GetComponent<PlayerDeath>().alive = true;
+        PickupListener[] candies = GameObject.FindObjectsOfType<PickupListener>();
+        foreach (PickupListener candy in candies)
+        {
+            candy.refresh();
+        }
 	}
 }
