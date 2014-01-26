@@ -10,9 +10,9 @@ GameObject:
   - 4: {fileID: 400000}
   - 50: {fileID: 5000000}
   - 61: {fileID: 6100000}
-  - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
   - 212: {fileID: 21200000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!50 &5000000
@@ -55,7 +55,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: 9fa1888b600945047961e5310b9f0b8c, type: 2}
   m_IsTrigger: 0
-  m_Size: {x: .300000012, y: .300000012}
+  m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -79,8 +79,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7086825cdfc5bd44aa3d5da2680c4228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 9
-  moveSpeed: 3
+  jumpSpeedSmall: 8.5
+  moveSpeedSmall: 5
+  jumpSpeedMedium: 6.5
+  moveSpeedMedium: 4
+  jumpSpeedLarge: 5
+  moveSpeedLarge: 2
+  boxSizeSmall: 1
+  boxSizeMedium: 2
+  boxSizeLarge: 3
+  resizeRate: .00999999978
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
