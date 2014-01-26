@@ -1,0 +1,28 @@
+<level width="1200" height="600">
+  <main tileset="castle" exportMode="XML">
+    <tile x="0" y="18" id="0" />
+    <tile x="0" y="19" id="4" />
+    <tile x="0" y="20" id="8" />
+    <tile x="1" y="18" id="1" />
+    <tile x="1" y="19" id="5" />
+    <tile x="1" y="20" id="9" />
+    <tile x="2" y="18" id="1" />
+    <tile x="2" y="19" id="5" />
+    <tile x="2" y="20" id="9" />
+    <tile x="3" y="18" id="1" />
+    <tile x="3" y="19" id="5" />
+    <tile x="3" y="20" id="9" />
+    <tile x="4" y="18" id="1" />
+    <tile x="4" y="19" id="5" />
+    <tile x="4" y="20" id="9" />
+    <tile x="5" y="18" id="1" />
+    <tile x="5" y="19" id="5" />
+    <tile x="5" y="20" id="9" />
+    <tile x="6" y="18" id="1" />
+    <tile x="6" y="19" id="5" />
+    <tile x="6" y="20" id="9" />
+    <tile x="7" y="18" id="3" />
+    <tile x="7" y="19" id="7" />
+    <tile x="7" y="20" id="11" />
+  </main>
+</level>

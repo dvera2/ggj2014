@@ -1,5 +1,5 @@
-<level width="2400" height="600">
-  <main tileset="platforms" exportMode="XML">
+<level width="3600" height="600">
+  <main tileset="cake" exportMode="XML">
     <tile x="0" y="0" id="5" />
     <tile x="0" y="1" id="5" />
     <tile x="0" y="2" id="5" />
@@ -162,7 +162,7 @@
     <tile x="6" y="9" id="5" />
     <tile x="6" y="10" id="5" />
     <tile x="6" y="11" id="11" />
-    <tile x="6" y="16" id="1" />
+    <tile x="6" y="16" id="3" />
     <tile x="6" y="17" id="5" />
     <tile x="6" y="18" id="5" />
     <tile x="6" y="19" id="5" />
@@ -182,7 +182,7 @@
     <tile x="7" y="8" id="5" />
     <tile x="7" y="9" id="5" />
     <tile x="7" y="10" id="9" />
-    <tile x="7" y="18" id="1" />
+    <tile x="7" y="18" id="3" />
     <tile x="7" y="19" id="5" />
     <tile x="7" y="20" id="5" />
     <tile x="7" y="21" id="5" />
@@ -279,7 +279,7 @@
     <tile x="15" y="22" id="5" />
     <tile x="15" y="23" id="5" />
     <tile x="15" y="24" id="5" />
-    <tile x="16" y="18" id="1" />
+    <tile x="16" y="18" id="0" />
     <tile x="16" y="19" id="5" />
     <tile x="16" y="20" id="5" />
     <tile x="16" y="21" id="5" />
@@ -300,7 +300,7 @@
     <tile x="18" y="22" id="5" />
     <tile x="18" y="23" id="5" />
     <tile x="18" y="24" id="11" />
-    <tile x="19" y="16" id="1" />
+    <tile x="19" y="16" id="0" />
     <tile x="19" y="17" id="5" />
     <tile x="19" y="18" id="5" />
     <tile x="19" y="19" id="5" />
@@ -329,12 +329,12 @@
     <tile x="22" y="20" id="5" />
     <tile x="22" y="21" id="7" />
     <tile x="22" y="22" id="11" />
-    <tile x="23" y="16" id="1" />
+    <tile x="23" y="16" id="3" />
     <tile x="23" y="17" id="7" />
     <tile x="23" y="18" id="7" />
     <tile x="23" y="19" id="7" />
     <tile x="23" y="20" id="11" />
-    <tile x="28" y="18" id="1" />
+    <tile x="28" y="18" id="0" />
     <tile x="28" y="19" id="4" />
     <tile x="28" y="20" id="4" />
     <tile x="28" y="21" id="8" />
@@ -343,12 +343,12 @@
     <tile x="29" y="20" id="5" />
     <tile x="29" y="21" id="5" />
     <tile x="29" y="22" id="9" />
-    <tile x="30" y="18" id="1" />
+    <tile x="30" y="18" id="3" />
     <tile x="30" y="19" id="7" />
     <tile x="30" y="20" id="7" />
     <tile x="30" y="21" id="7" />
     <tile x="30" y="22" id="11" />
-    <tile x="35" y="17" id="1" />
+    <tile x="35" y="17" id="0" />
     <tile x="35" y="18" id="5" />
     <tile x="35" y="19" id="8" />
     <tile x="36" y="17" id="1" />
@@ -357,12 +357,12 @@
     <tile x="36" y="20" id="4" />
     <tile x="36" y="21" id="4" />
     <tile x="36" y="22" id="9" />
-    <tile x="37" y="17" id="1" />
+    <tile x="37" y="17" id="3" />
     <tile x="37" y="18" id="7" />
     <tile x="37" y="19" id="7" />
     <tile x="37" y="20" id="7" />
     <tile x="37" y="21" id="11" />
-    <tile x="43" y="17" id="1" />
+    <tile x="43" y="17" id="0" />
     <tile x="43" y="18" id="8" />
     <tile x="44" y="17" id="1" />
     <tile x="44" y="18" id="5" />
@@ -399,20 +399,20 @@
     <tile x="51" y="19" id="11" />
     <tile x="52" y="17" id="1" />
     <tile x="52" y="18" id="9" />
-    <tile x="53" y="17" id="1" />
+    <tile x="53" y="17" id="3" />
     <tile x="53" y="18" id="11" />
-    <tile x="57" y="16" id="1" />
+    <tile x="57" y="16" id="0" />
     <tile x="57" y="17" id="4" />
     <tile x="57" y="18" id="4" />
     <tile x="57" y="19" id="4" />
     <tile x="57" y="20" id="8" />
-    <tile x="58" y="16" id="1" />
+    <tile x="58" y="16" id="3" />
     <tile x="58" y="17" id="7" />
     <tile x="58" y="18" id="11" />
-    <tile x="62" y="15" id="1" />
+    <tile x="62" y="15" id="0" />
     <tile x="62" y="16" id="4" />
     <tile x="62" y="17" id="8" />
-    <tile x="63" y="15" id="1" />
+    <tile x="63" y="15" id="3" />
     <tile x="63" y="16" id="7" />
     <tile x="63" y="17" id="7" />
     <tile x="63" y="18" id="11" />
@@ -456,7 +456,7 @@
     <tile x="82" y="15" id="1" />
     <tile x="82" y="16" id="5" />
     <tile x="82" y="17" id="9" />
-    <tile x="83" y="9" id="1" />
+    <tile x="83" y="9" id="0" />
     <tile x="83" y="10" id="4" />
     <tile x="83" y="11" id="4" />
     <tile x="83" y="12" id="4" />
@@ -475,7 +475,7 @@
     <tile x="84" y="18" id="4" />
     <tile x="84" y="19" id="4" />
     <tile x="84" y="20" id="8" />
-    <tile x="85" y="9" id="1" />
+    <tile x="85" y="9" id="3" />
     <tile x="85" y="10" id="7" />
     <tile x="85" y="11" id="7" />
     <tile x="85" y="12" id="7" />

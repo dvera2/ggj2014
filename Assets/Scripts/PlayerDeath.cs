@@ -14,7 +14,7 @@ public class PlayerDeath : MonoBehaviour {
         if (!alive)
         {
             respawnCount++;
-            if (respawnCount == 90)
+            if (respawnCount == 1)
             {
                 respawnCount = 0;
                 SpawnScript.levelReset();
