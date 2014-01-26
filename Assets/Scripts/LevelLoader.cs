@@ -122,7 +122,7 @@ public class LevelLoader : MonoBehaviour {
 							newTile.GetComponent<SpriteRenderer>().sprite = TileSprites[tileId];
 
 							BoxCollider2D tileBox = newTile.GetComponent<BoxCollider2D>();
-
+							
 							if(x > 0)
 							{
 								BoxCollider2D leftBoxCollider = tileArray[x - 1, y];
@@ -134,14 +134,16 @@ public class LevelLoader : MonoBehaviour {
 								else
 								{
 									// Extend the current box to encompas, translate then scale
-									Vector3 avgPos = leftBoxCollider.transform.position;
-									avgPos.x = ((leftBoxCollider.transform.position.x - (leftBoxCollider.transform.localScale.x / 2))
-									              + (newTile.transform.position.x + (newTile.transform.localScale.x / 2))) / 2;
-									leftBoxCollider.transform.position = avgPos;
+									//Vector3 avgPos = leftBoxCollider.transform.position;
+									//avgPos.x = ((leftBoxCollider.transform.position.x - (leftBoxCollider.transform.localScale.x / 2))
+									//              + (newTile.transform.position.x + (newTile.transform.localScale.x / 2))) / 2;
+									//leftBoxCollider.transform.position = avgPos;
+									leftBoxCollider.center = leftBoxCollider.center + new Vector2(0.5f, 0.0f);
 
-									Vector3 scale = leftBoxCollider.transform.localScale;
-									scale.x += tileBox.transform.localScale.x;
-									leftBoxCollider.transform.localScale = scale;
+									//Vector3 scale = leftBoxCollider.transform.localScale;
+									//scale.x += tileBox.transform.localScale.x;
+									//leftBoxCollider.transform.localScale = scale;
+									leftBoxCollider.size = leftBoxCollider.size + new Vector2(1.0f, 0.0f);
 
 									tileArray[x,y] = leftBoxCollider;
 									
