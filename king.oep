@@ -16,7 +16,7 @@
     <Width>1200</Width>
     <Height>600</Height>
   </LevelMaximumSize>
-  <Filename>C:\Users\Jon\Documents\Development\king.oep</Filename>
+  <Filename>C:\Users\Jon\Documents\Development\ggj2014\king.oep</Filename>
   <AngleMode>Radians</AngleMode>
   <CameraEnabled>false</CameraEnabled>
   <CameraSize>
@@ -42,7 +42,7 @@
   <Tilesets>
     <Tileset>
       <Name>platforms</Name>
-      <FilePath>ggj2014\Assets\Textures\tile_map.png</FilePath>
+      <FilePath>Assets\Textures\tile_map.png</FilePath>
       <TileSize>
         <Width>24</Width>
         <Height>24</Height>
