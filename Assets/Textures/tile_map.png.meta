@@ -45,7 +45,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
+        y: 120
         width: 24
         height: 24
       alignment: 0
@@ -54,7 +54,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 24
-        y: 48
+        y: 120
         width: 24
         height: 24
       alignment: 0
@@ -63,7 +63,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 48
+        y: 120
         width: 24
         height: 24
       alignment: 0
@@ -71,8 +71,8 @@ TextureImporter:
     - name: tile_map_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 24
+        x: 72
+        y: 120
         width: 24
         height: 24
       alignment: 0
@@ -80,13 +80,130 @@ TextureImporter:
     - name: tile_map_4
       rect:
         serializedVersion: 2
+        x: 0
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tile_map_5
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tile_map_6
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tile_map_7
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tile_map_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tile_map_9
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tile_map_10
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tile_map_11
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tile_map_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tile_map_13
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tile_map_14
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tile_map_15
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tile_map_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tile_map_17
+      rect:
+        serializedVersion: 2
         x: 24
         y: 24
         width: 24
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: tile_map_5
+    - name: tile_map_18
       rect:
         serializedVersion: 2
         x: 48
@@ -95,7 +212,16 @@ TextureImporter:
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: tile_map_6
+    - name: tile_map_19
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tile_map_20
       rect:
         serializedVersion: 2
         x: 0
@@ -104,7 +230,7 @@ TextureImporter:
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: tile_map_7
+    - name: tile_map_21
       rect:
         serializedVersion: 2
         x: 24
@@ -113,10 +239,19 @@ TextureImporter:
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: tile_map_8
+    - name: tile_map_22
       rect:
         serializedVersion: 2
         x: 48
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tile_map_23
+      rect:
+        serializedVersion: 2
+        x: 72
         y: 0
         width: 24
         height: 24
