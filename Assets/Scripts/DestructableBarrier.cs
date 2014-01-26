@@ -3,7 +3,7 @@ using System.Collections;
 
 public class DestructableBarrier : MonoBehaviour {
     public float breakTime = 0.5f;
-    public GameObject articleSystemPrefab;
+    public GameObject particleSystemPrefab;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -18,7 +18,7 @@ public class DestructableBarrier : MonoBehaviour {
 
     IEnumerator Collapse(ContactPoint2D contact)
     {
-        GameObject particles = Instantiate(articleSystemPrefab, contact.point, Quaternion.identity) as GameObject;
+        GameObject particles = Instantiate(particleSystemPrefab, contact.point, Quaternion.identity) as GameObject;
         particles.GetComponent<ParticleSystem>().Emit(50);
         particles.GetComponent<ParticleSystem>().renderer.sortingLayerName = "particles";
         yield return new WaitForSeconds(breakTime);
