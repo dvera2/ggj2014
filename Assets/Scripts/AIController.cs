@@ -18,7 +18,7 @@ public class AIController : MonoBehaviour
     public Behavior behavior = Behavior.PACE;
     public float paceDistance = 0.5f;
     private float startX;
-    public GameObject particleSystem;
+    public GameObject articleSystemPrefab;
     private GameObject activeParticles;
 
 	// Use this for initialization
@@ -78,7 +78,7 @@ public class AIController : MonoBehaviour
             {
                 if (activeParticles != null)
                     Destroy(activeParticles);
-                activeParticles = Instantiate(particleSystem, contact.point, Quaternion.identity) as GameObject;
+                activeParticles = Instantiate(articleSystemPrefab, contact.point, Quaternion.identity) as GameObject;
                 activeParticles.GetComponent<ParticleSystem>().Emit(50);
                 activeParticles.GetComponent<ParticleSystem>().renderer.sortingLayerName = "particles";
                 contact.collider.GetComponent<Character>().jump();
