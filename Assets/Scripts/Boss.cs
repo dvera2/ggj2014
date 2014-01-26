@@ -28,6 +28,7 @@ public class Boss : MonoBehaviour {
         {
             velocity.y = -3f;
             dying = true;
+            (GameObject.FindGameObjectWithTag("Player").GetComponent<Character>()).forceSmall();
         }
     }
 }
