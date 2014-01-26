@@ -22,6 +22,10 @@ public class SpawnScript : MonoBehaviour {
         player.gameObject.GetComponent<Character>().forceSmall();
         player.gameObject.GetComponent<PlayerDeath>().alive = true;
         PickupListener[] candies = GameObject.FindObjectsOfType<PickupListener>();
+        foreach(GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            enemy.GetComponentInChildren<SchnopAnimController>().actionState = SchnopAnimController.ActionState.Walk;
+        }
         foreach (PickupListener candy in candies)
         {
             candy.refresh();
