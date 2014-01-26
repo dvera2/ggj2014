@@ -68,7 +68,9 @@ public class AIController : MonoBehaviour
         {
             if (contact.collider.tag == "Player" && Math.Abs(contact.normal.x) < -contact.normal.y)
             {
-                GameObject.Destroy(gameObject);
+                Character.Size otherSize = contact.collider.GetComponent<Character>().size;
+                Character.Size size = GetComponent<Character>().size;
+                if(size == otherSize || otherSize == Character.Size.LARGE || size == Character.Size.MEDIUM) GameObject.Destroy(gameObject);
                 contact.collider.GetComponent<Character>().jump();
             }
         }
