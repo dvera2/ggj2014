@@ -13,10 +13,10 @@ public class Character : MonoBehaviour {
     public float moveSpeedMedium = 4f;
     public float jumpSpeedLarge = 5f;
     public float moveSpeedLarge = 2f;
-    public float boxSizeSmall = 1f;
-    public float boxSizeMedium = 2f;
-    public float boxSizeLarge = 3f;
-    public float resizeRate = 0.01f;
+    float boxSizeSmall = 0.9f;
+    float boxSizeMedium = 1.9f;
+    float boxSizeLarge = 2.9f;
+    float resizeRate = 0.01f;
     public float baseHeight;
 
     public Transform checkpointTemplate;
@@ -41,7 +41,7 @@ public class Character : MonoBehaviour {
         if (gameObject.tag == "Player")
         {
             move(InputManager.HorizAxis);
-            if (Math.Abs(rigidbody2D.velocity.y) <= 0.001f && InputManager.JumpDown) jump();
+            if (InputManager.JumpDown) jump();
             if (InputManager.RestartDown) SpawnScript.levelReset();
         }
 
@@ -85,7 +85,8 @@ public class Character : MonoBehaviour {
 
     public void jump()
     {
-        rigidbody2D.velocity = new Vector2(0f, jumpSpeed);
+        if (rigidbody2D.velocity.y < jumpSpeed / 4) rigidbody2D.velocity += new Vector2(0f, jumpSpeed) / 4;
+        else rigidbody2D.velocity += new Vector2(0f, jumpSpeed) / 20;
     }
 
     public void changeSize(Size s)
