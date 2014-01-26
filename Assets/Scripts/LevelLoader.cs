@@ -13,6 +13,7 @@ public class LevelLoader : MonoBehaviour {
 
 	public bool generateSet = false;
 
+	private const int tileSize = 24;
 	private const float tileScale = 0.99f;
 	private Transform tileSet;
 
@@ -73,6 +74,12 @@ public class LevelLoader : MonoBehaviour {
 
 		XmlNodeList levelList = xmlDoc.GetElementsByTagName ("level");
 
+		int levelWidth = int.Parse( levelList [0].Attributes ["width"].Value );
+		int levelHeight = int.Parse (levelList [0].Attributes ["height"].Value);
+		int xTileCount = levelWidth / 24;
+		int yTileCount = levelHeight / 24;
+
+
 		Transform tileSet = TileSet ();
 
 		foreach (XmlNode level in levelList) 
@@ -92,29 +99,66 @@ public class LevelLoader : MonoBehaviour {
 					}
 				}
 
-				int currentBoxColliderY = -1;
+				BoxCollider2D[,] tileArray = new BoxCollider2D[xTileCount, yTileCount];
 
 				foreach(XmlNode tile in tiles)
 				{
 					if(tile.Name == "tile")
 					{
-						float x = float.Parse( tile.Attributes["x"].Value );
-						float y = maxTileY - float.Parse( tile.Attributes["y"].Value );
+						int x = int.Parse( tile.Attributes["x"].Value );
+						int y = int.Parse( tile.Attributes["y"].Value );
 						int tileId = int.Parse(tile.Attributes["id"].Value);
 
 						// Scale slightly to avoid gaps in tiles
 						//x *= tileScale;
 						//y *= tileScale;
 
-						GameObject newTile = GameObject.Instantiate(Tile, new Vector3(x, y, 0.0f), Quaternion.identity) as GameObject;
+						GameObject newTile = GameObject.Instantiate(Tile, new Vector3((float)x, maxTileY - y, 0.0f), Quaternion.identity) as GameObject;
 						newTile.transform.parent = tileSet.transform;
 
 						if(tileId >= 0 && tileId < TileSprites.Length)
+						{
 							newTile.GetComponent<SpriteRenderer>().sprite = TileSprites[tileId];
+
+							BoxCollider2D tileBox = newTile.GetComponent<BoxCollider2D>();
+
+							if(x > 0)
+							{
+								BoxCollider2D leftBoxCollider = tileArray[x - 1, y];
+
+								if(leftBoxCollider == null)
+								{
+									tileArray[x,y] = tileBox;
+								}
+								else
+								{
+									// Extend the current box to encompas, translate then scale
+									Vector3 avgPos = leftBoxCollider.transform.position;
+									avgPos.x = ((leftBoxCollider.transform.position.x - (leftBoxCollider.transform.localScale.x / 2))
+									              + (newTile.transform.position.x + (newTile.transform.localScale.x / 2))) / 2;
+									leftBoxCollider.transform.position = avgPos;
+
+									Vector3 scale = leftBoxCollider.transform.localScale;
+									scale.x += tileBox.transform.localScale.x;
+									leftBoxCollider.transform.localScale = scale;
+
+									tileArray[x,y] = leftBoxCollider;
+									
+									if(Application.isEditor) {
+										DestroyImmediate(tileBox);
+									} else {
+										Destroy(tileBox);
+									}
+								}
+							}
+							else
+							{
+								tileArray[x,y] = tileBox;
+							}
+						}
 					}
 				}
 			}
 		}
-
 	}
 }
