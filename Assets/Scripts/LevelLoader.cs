@@ -19,7 +19,7 @@ public class LevelLoader : MonoBehaviour {
 	private Transform tileSet;
 
 	private const float textPrintRate = 0.05f;
-	private float showLevelIntroTimer = 6.0f;
+	private float showLevelIntroTimer = 3.0f;
 	private Texture2D blackTexture;
 	private string currentIntroQuote;
 	public GUIStyle quoteStyle = new GUIStyle();
@@ -196,7 +196,8 @@ public class LevelLoader : MonoBehaviour {
 
 	void OnGUI()
 	{
-		showLevelIntroTimer -= Time.deltaTime;
+		if(currentIntroQuote == IntroQuote)
+			showLevelIntroTimer -= Time.deltaTime;
 
 		if (showLevelIntroTimer > 0.0f) 
 		{
