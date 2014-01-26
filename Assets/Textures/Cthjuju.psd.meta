@@ -40,6 +40,141 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Cthjuju_Tentacle2
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 742
+        width: 385
+        height: 173
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Cthjuju_Head
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 698
+        width: 290
+        height: 320
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Cthjuju_3
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 674
+        width: 108
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Cthjuju_Tentacle
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 557
+        width: 404
+        height: 133
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Cthjuju_Tendril2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 579
+        width: 101
+        height: 86
+      alignment: 3
+      pivot: {x: 1, y: 1}
+    - name: Cthjuju_Tendril3
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 598
+        width: 119
+        height: 62
+      alignment: 3
+      pivot: {x: 1, y: 1}
+    - name: Cthjuju_Body
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 165
+        width: 456
+        height: 388
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Cthjuju_Brow
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 475
+        width: 84
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Cthjuju_EyeNeutral
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 509
+        width: 167
+        height: 87
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Cthjuju_Tendril1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 356
+        width: 158
+        height: 68
+      alignment: 5
+      pivot: {x: 1, y: .5}
+    - name: Cthjuju_EyeMad
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 387
+        width: 167
+        height: 77
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Cthjuju_Wing1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 9
+        width: 191
+        height: 209
+      alignment: 9
+      pivot: {x: .141474456, y: .0749437585}
+    - name: Cthjuju_Pup_Norm
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 78
+        width: 140
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Cthjuju_Pup_Mad
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 74
+        width: 143
+        height: 67
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Cthjuju_Pup_Big
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 71
+        width: 142
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 

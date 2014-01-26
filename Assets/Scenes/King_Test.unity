@@ -2367,6 +2367,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2004785873}
   - 95: {fileID: 2004785874}
+  - 114: {fileID: 2004785876}
   - 114: {fileID: 2004785875}
   m_Layer: 0
   m_Name: KingRig
@@ -2414,6 +2415,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  actionState: 0
+  emoState: 0
+--- !u!114 &2004785876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 2527886765bd1084f9b29729713829df,
+    type: 2}
+  m_PrefabInternal: {fileID: 1170353215}
+  m_GameObject: {fileID: 2004785872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8ccf0494a6009499665729521c6ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2004785874}
   actionState: 0
   emoState: 0
 --- !u!1 &2036743543
