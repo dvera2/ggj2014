@@ -41,10 +41,6 @@ TagManager:
   User Layer 30: 
   User Layer 31: 
   m_SortingLayers:
-  - name: particles
-    userID: 1
-    uniqueID: 2844212751
-    locked: 0
   - name: Background
     userID: 2
     uniqueID: 3514202323
@@ -52,4 +48,8 @@ TagManager:
   - name: Default
     userID: 0
     uniqueID: 0
+    locked: 0
+  - name: particles
+    userID: 1
+    uniqueID: 2844212751
     locked: 0
