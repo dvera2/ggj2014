@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 
 public class PlayerDeath : MonoBehaviour {
     public bool alive = true;
@@ -12,8 +13,8 @@ public class PlayerDeath : MonoBehaviour {
     {
         foreach(ContactPoint2D contact in collision.contacts)
         {
-            if (contact.collider.tag == "Enemy" || contact.collider.tag == "Trap")
-                die();
+            if (contact.collider.tag == "Trap") die();
+            else if (contact.collider.tag == "Enemy" && Math.Abs(contact.normal.x) > contact.normal.y) die();
         }
     }
 
