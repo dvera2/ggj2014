@@ -21,6 +21,7 @@ public class Character : MonoBehaviour {
 
     float moveSpeed;
     float jumpSpeed;
+    float facing = 1; // 1 or -1
 
     Vector2 moveDir;
     bool resizing = false;
@@ -43,37 +44,46 @@ public class Character : MonoBehaviour {
             if (InputManager.RestartDown) SpawnScript.levelReset();
         }
 
-        BoxCollider2D b = gameObject.GetComponent<BoxCollider2D>() as BoxCollider2D;
+        if (gameObject.rigidbody2D.velocity.x > 0) facing = 1f;
+        else if (gameObject.rigidbody2D.velocity.x < 0) facing = -1f;
+
+        Transform b = gameObject.transform;
 
         if (resizing)
         {
-            if (gettingbigger) b.size = new Vector2(b.size.x + resizeRate, b.size.y + resizeRate);
-            else b.size = new Vector2(b.size.x - resizeRate, b.size.y - resizeRate);
-            baseHeight = transform.position.y - (b.size.y / 2);
+            if (gettingbigger) b.transform.localScale = new Vector2((Math.Abs(b.transform.localScale.x) + resizeRate) * facing, b.transform.localScale.y + resizeRate);
+            else b.transform.localScale = new Vector2((Math.Abs(b.transform.localScale.x) - resizeRate) * facing, b.transform.localScale.y - resizeRate);
+            baseHeight = transform.position.y - (b.transform.localScale.y / 2);
 
-            if (size == Size.LARGE && b.size.x >= boxSizeLarge)
+            if (size == Size.LARGE && Math.Abs(b.transform.localScale.x) >= boxSizeLarge)
             {
                 resizing = false;
-                b.size = new Vector2(boxSizeLarge, boxSizeLarge);
+                b.transform.localScale = new Vector2(boxSizeLarge * facing, boxSizeLarge);
             }
-            else if (size == Size.MEDIUM && gettingbigger && b.size.x >= boxSizeMedium)
+            else if (size == Size.MEDIUM && gettingbigger && Math.Abs(b.transform.localScale.x) >= boxSizeMedium)
             {
                 resizing = false;
-                b.size = new Vector2(boxSizeMedium, boxSizeMedium);
+                b.transform.localScale = new Vector2(boxSizeMedium * facing, boxSizeMedium);
             }
-            else if (size == Size.MEDIUM && !gettingbigger && b.size.x <= boxSizeMedium)
+            else if (size == Size.MEDIUM && !gettingbigger && Math.Abs(b.transform.localScale.x) <= boxSizeMedium)
             {
                 resizing = false;
-                b.size = new Vector2(boxSizeMedium, boxSizeMedium);
+                b.transform.localScale = new Vector2(boxSizeMedium * facing, boxSizeMedium);
             }
-            else if (size == Size.SMALL && b.size.x <= boxSizeSmall)
+            else if (size == Size.SMALL && Math.Abs(b.transform.localScale.x) <= boxSizeSmall)
             {
                 resizing = false;
-                b.size = new Vector2(boxSizeSmall, boxSizeSmall);
+                b.transform.localScale = new Vector2(boxSizeSmall * facing, boxSizeSmall);
             }
         }
+        else
+        {
+            b.transform.localScale = new Vector2((Math.Abs(b.transform.localScale.x)) * facing, b.transform.localScale.y);
+        }
 
-        baseHeight = transform.position.y - (b.size.y / 2) + 0.01f;
+        //gameObject.transform.localScale = new Vector2(Math.Abs(gameObject.transform.localScale.x * facing), gameObject.transform.localScale.y);
+        
+        baseHeight = transform.position.y - (b.transform.localScale.y / 2) + 0.01f;
     }
 
     public void move(float speed)
