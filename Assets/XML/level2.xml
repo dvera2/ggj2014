@@ -1,5 +1,5 @@
 <level width="2400" height="600">
-  <main tileset="platforms" exportMode="XML">
+  <main tileset="candy" exportMode="XML">
     <tile x="0" y="20" id="1" />
     <tile x="0" y="21" id="5" />
     <tile x="0" y="22" id="5" />

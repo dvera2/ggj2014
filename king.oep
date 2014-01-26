@@ -9,14 +9,14 @@
     <Height>600</Height>
   </LevelDefaultSize>
   <LevelMinimumSize>
-    <Width>1200</Width>
+    <Width>3600</Width>
     <Height>600</Height>
   </LevelMinimumSize>
   <LevelMaximumSize>
     <Width>1200</Width>
     <Height>600</Height>
   </LevelMaximumSize>
-  <Filename>C:\Users\Jon\Documents\Development\ggj2014\king.oep</Filename>
+  <Filename>C:\Users\Traynor Traynor\Documents\GGJam2014\king.oep</Filename>
   <AngleMode>Radians</AngleMode>
   <CameraEnabled>false</CameraEnabled>
   <CameraSize>
@@ -43,6 +43,33 @@
     <Tileset>
       <Name>platforms</Name>
       <FilePath>Assets\Textures\tile_map.png</FilePath>
+      <TileSize>
+        <Width>24</Width>
+        <Height>24</Height>
+      </TileSize>
+      <TileSep>0</TileSep>
+    </Tileset>
+    <Tileset>
+      <Name>cake</Name>
+      <FilePath>Assets\Textures\ogmo_caketileset.png</FilePath>
+      <TileSize>
+        <Width>24</Width>
+        <Height>24</Height>
+      </TileSize>
+      <TileSep>0</TileSep>
+    </Tileset>
+    <Tileset>
+      <Name>candy</Name>
+      <FilePath>Assets\Textures\ogmo_candytileset.png</FilePath>
+      <TileSize>
+        <Width>24</Width>
+        <Height>24</Height>
+      </TileSize>
+      <TileSep>0</TileSep>
+    </Tileset>
+    <Tileset>
+      <Name>castle</Name>
+      <FilePath>Assets\Textures\ogmo_castletileset.png</FilePath>
       <TileSize>
         <Width>24</Width>
         <Height>24</Height>
