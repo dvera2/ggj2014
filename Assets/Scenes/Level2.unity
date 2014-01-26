@@ -1363,7 +1363,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 23af0b38c59865142b221330d523b526, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 9d1e4d589dfaef443883720d933f9727, type: 3}
   m_Color: {r: .357482672, g: .627422154, b: .852941155, a: 1}
 --- !u!4 &87361214
 Transform:
@@ -1373,7 +1373,7 @@ Transform:
   m_GameObject: {fileID: 87361209}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 45.1867447, y: 6.24013186, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: .200000003, y: .200000003, z: .200000003}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &90358575
@@ -2662,8 +2662,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7946f74f499c35a46a1eb192c92c58b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakTime: .5
-  particleSystemPrefab: {fileID: 100000, guid: b2c10a6cef1a0fd4d8d108d163b53273, type: 2}
+  breakTime: 2
+  particleSystemPrefab: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
 --- !u!61 &173175119
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3969,7 +3969,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 5ec4fad948d44964498cef71dea5547d, type: 2}
       propertyPath: particleSystemPrefab
       value: 
-      objectReference: {fileID: 100000, guid: b2c10a6cef1a0fd4d8d108d163b53273, type: 2}
+      objectReference: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ec4fad948d44964498cef71dea5547d, type: 2}
   m_RootGameObject: {fileID: 300822046}
@@ -4954,7 +4954,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 23af0b38c59865142b221330d523b526, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d1e4d589dfaef443883720d933f9727, type: 3}
   m_Color: {r: .860294104, g: .654381931, b: .113862462, a: 1}
 --- !u!4 &292875790
 Transform:
@@ -4964,7 +4964,7 @@ Transform:
   m_GameObject: {fileID: 292875785}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 17.9975834, y: 8.41674042, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: .200000003, y: .200000003, z: .200000003}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &300822046
@@ -5013,8 +5013,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7946f74f499c35a46a1eb192c92c58b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakTime: .5
-  particleSystemPrefab: {fileID: 100000, guid: b2c10a6cef1a0fd4d8d108d163b53273, type: 2}
+  breakTime: 2
+  particleSystemPrefab: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
 --- !u!61 &300822049
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15611,7 +15611,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 5ec4fad948d44964498cef71dea5547d, type: 2}
       propertyPath: particleSystemPrefab
       value: 
-      objectReference: {fileID: 100000, guid: b2c10a6cef1a0fd4d8d108d163b53273, type: 2}
+      objectReference: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ec4fad948d44964498cef71dea5547d, type: 2}
   m_RootGameObject: {fileID: 1383212322}
@@ -19245,7 +19245,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 5ec4fad948d44964498cef71dea5547d, type: 2}
       propertyPath: particleSystemPrefab
       value: 
-      objectReference: {fileID: 100000, guid: b2c10a6cef1a0fd4d8d108d163b53273, type: 2}
+      objectReference: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ec4fad948d44964498cef71dea5547d, type: 2}
   m_RootGameObject: {fileID: 173175116}
@@ -23981,8 +23981,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7946f74f499c35a46a1eb192c92c58b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakTime: .5
-  particleSystemPrefab: {fileID: 100000, guid: b2c10a6cef1a0fd4d8d108d163b53273, type: 2}
+  breakTime: 2
+  particleSystemPrefab: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
 --- !u!61 &1383212325
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24883,7 +24883,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 23af0b38c59865142b221330d523b526, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 9d1e4d589dfaef443883720d933f9727, type: 3}
   m_Color: {r: .357482672, g: .627422154, b: .852941155, a: 1}
 --- !u!4 &1422871822
 Transform:
@@ -24893,7 +24893,7 @@ Transform:
   m_GameObject: {fileID: 1422871817}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 71.3386841, y: 11.114583, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: .200000003, y: .200000003, z: .200000003}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &1427252798
@@ -27801,7 +27801,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 23af0b38c59865142b221330d523b526, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 9d1e4d589dfaef443883720d933f9727, type: 3}
   m_Color: {r: .357482672, g: .627422154, b: .852941155, a: 1}
 --- !u!4 &1623158822
 Transform:
@@ -27811,7 +27811,7 @@ Transform:
   m_GameObject: {fileID: 1623158817}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 69.9459839, y: 11.1919546, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: .200000003, y: .200000003, z: .200000003}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &1623560819
@@ -28412,7 +28412,7 @@ MonoBehaviour:
   direction: 0
   behavior: 0
   paceDistance: 1
-  particleSystemPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
 --- !u!50 &1646470708
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -28676,7 +28676,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 23af0b38c59865142b221330d523b526, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d1e4d589dfaef443883720d933f9727, type: 3}
   m_Color: {r: .860294104, g: .654381931, b: .113862462, a: 1}
 --- !u!4 &1651547593
 Transform:
@@ -28686,7 +28686,7 @@ Transform:
   m_GameObject: {fileID: 1651547588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 65.9226379, y: 9.95399952, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: .200000003, y: .200000003, z: .200000003}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &1665377953
@@ -28818,7 +28818,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 23af0b38c59865142b221330d523b526, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d1e4d589dfaef443883720d933f9727, type: 3}
   m_Color: {r: .860294104, g: .654381931, b: .113862462, a: 1}
 --- !u!4 &1665729601
 Transform:
@@ -28828,7 +28828,7 @@ Transform:
   m_GameObject: {fileID: 1665729596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 66.9284744, y: 9.95399952, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: .200000003, y: .200000003, z: .200000003}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &1665777057
@@ -31596,7 +31596,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 23af0b38c59865142b221330d523b526, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d1e4d589dfaef443883720d933f9727, type: 3}
   m_Color: {r: .860294104, g: .654381931, b: .113862462, a: 1}
 --- !u!4 &1836554078
 Transform:
@@ -31606,7 +31606,7 @@ Transform:
   m_GameObject: {fileID: 1836554073}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 20.6163387, y: 8.41673946, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: .200000003, y: .200000003, z: .200000003}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &1836962994
@@ -34574,7 +34574,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 23af0b38c59865142b221330d523b526, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 9d1e4d589dfaef443883720d933f9727, type: 3}
   m_Color: {r: .357482672, g: .627422154, b: .852941155, a: 1}
 --- !u!4 &2025336076
 Transform:
@@ -34584,7 +34584,7 @@ Transform:
   m_GameObject: {fileID: 2025336071}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 41.2407646, y: 3.76422238, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: .200000003, y: .200000003, z: .200000003}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &2029997652
@@ -35963,7 +35963,7 @@ MonoBehaviour:
   direction: 0
   behavior: 0
   paceDistance: 1
-  particleSystemPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
 --- !u!50 &2111175513
 Rigidbody2D:
   m_ObjectHideFlags: 0

@@ -86,10 +86,6 @@ MonoBehaviour:
   moveSpeedMedium: 4
   jumpSpeedLarge: 5
   moveSpeedLarge: 2
-  boxSizeSmall: 1
-  boxSizeMedium: 2
-  boxSizeLarge: 3
-  resizeRate: .00999999978
   baseHeight: 0
   checkpointTemplate: {fileID: 0}
   size: 0
@@ -107,7 +103,7 @@ MonoBehaviour:
   direction: 0
   behavior: 0
   paceDistance: 1
-  particleSystemPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

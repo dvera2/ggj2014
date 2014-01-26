@@ -948,10 +948,6 @@ MonoBehaviour:
   moveSpeedMedium: 4
   jumpSpeedLarge: 5
   moveSpeedLarge: 2
-  boxSizeSmall: 1
-  boxSizeMedium: 2
-  boxSizeLarge: 3
-  resizeRate: .00999999978
   baseHeight: 0
   checkpointTemplate: {fileID: 400000, guid: 113cd253432c17a42885b47d30c03722, type: 2}
   size: 0
@@ -9816,7 +9812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3867d280833822449dbfa0a383d875d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleSystemPrefab: {fileID: 100000, guid: b2c10a6cef1a0fd4d8d108d163b53273, type: 2}
+  particleSystemPrefab: {fileID: 100000, guid: 22e45c8ae7cea264aa6ad81a0c7037e9, type: 2}
 --- !u!114 &871130704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16284,7 +16280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3867d280833822449dbfa0a383d875d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleSystemPrefab: {fileID: 100000, guid: b2c10a6cef1a0fd4d8d108d163b53273, type: 2}
+  particleSystemPrefab: {fileID: 100000, guid: 22e45c8ae7cea264aa6ad81a0c7037e9, type: 2}
 --- !u!114 &1329348813
 MonoBehaviour:
   m_ObjectHideFlags: 0
