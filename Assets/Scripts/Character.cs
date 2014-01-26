@@ -95,7 +95,7 @@ public class Character : MonoBehaviour {
     public void jump()
     {
         if (rigidbody2D.velocity.y < jumpSpeed / 4) rigidbody2D.velocity += new Vector2(0f, jumpSpeed) / 4;
-        else rigidbody2D.velocity += new Vector2(0f, jumpSpeed) / 20;
+        else rigidbody2D.velocity += new Vector2(0f, jumpSpeed) * Time.deltaTime * 3.2f;
     }
 
     public void changeSize(Size s)
