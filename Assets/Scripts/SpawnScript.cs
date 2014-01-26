@@ -26,5 +26,11 @@ public class SpawnScript : MonoBehaviour {
         {
             candy.refresh();
         }
+
+        CrumblingPlatform[] platforms = GameObject.FindObjectsOfType<CrumblingPlatform>();
+        foreach (CrumblingPlatform platform in platforms)
+        {
+            platform.refresh();
+        }
 	}
 }
