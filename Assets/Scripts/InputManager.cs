@@ -5,6 +5,7 @@ public class InputManager : MonoBehaviour
 {
     public static float HorizAxis;
     public static bool JumpDown;
+    public static bool RestartDown;
 
 	// Use this for initialization
 	void Start ()
@@ -17,5 +18,8 @@ public class InputManager : MonoBehaviour
     {
         HorizAxis = Input.GetAxis("Horizontal");
         JumpDown = Input.GetButtonDown("Jump");
-	}
+        RestartDown = Input.GetButtonDown("Restart");
+        if (Input.GetButtonDown("ChangeLevel1")) StateManager.changeLevel("Level1");
+        if (Input.GetButtonDown("ChangeLevel2")) StateManager.changeLevel("Level2");
+    }
 }
