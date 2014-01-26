@@ -17,7 +17,7 @@ public class StateManager : MonoBehaviour {
         else if (level == "Level1") changeLevel("Level2");
         else if (level == "Level2") changeLevel("Level3");
         else if (level == "Level3") changeLevel("Level4");
-        //else if (level == "Level4") changeLevel("Ending");
+        else if (level == "Level4") changeLevel("Credits");
     }
 
     public static string getCurrentLevel()
