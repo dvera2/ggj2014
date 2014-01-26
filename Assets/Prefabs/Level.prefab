@@ -43,9 +43,14 @@ MonoBehaviour:
   TileSprites:
   - {fileID: 21300000, guid: 715bda9116242474b9cb27757aa0fe49, type: 3}
   - {fileID: 21300002, guid: 715bda9116242474b9cb27757aa0fe49, type: 3}
+  - {fileID: 21300004, guid: 715bda9116242474b9cb27757aa0fe49, type: 3}
   - {fileID: 21300006, guid: 715bda9116242474b9cb27757aa0fe49, type: 3}
   - {fileID: 21300008, guid: 715bda9116242474b9cb27757aa0fe49, type: 3}
-  generateSet: 0
+  - {fileID: 21300010, guid: 715bda9116242474b9cb27757aa0fe49, type: 3}
+  - {fileID: 21300012, guid: 715bda9116242474b9cb27757aa0fe49, type: 3}
+  - {fileID: 21300014, guid: 715bda9116242474b9cb27757aa0fe49, type: 3}
+  - {fileID: 21300016, guid: 715bda9116242474b9cb27757aa0fe49, type: 3}
+  generateSet: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
