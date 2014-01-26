@@ -13,7 +13,7 @@ public class Boss : MonoBehaviour {
         if(!dying && delayTimer >= projectileDelay)
         {
             delayTimer = 0f;
-            Instantiate(projectile, transform.position, Quaternion.identity);
+            Instantiate(projectile, new Vector3(transform.position.x - 2.5f, transform.position.y + 2f, 0f), Quaternion.identity);
         }
         else if (dying)
         {
@@ -24,7 +24,7 @@ public class Boss : MonoBehaviour {
 
     void OnTiggerEnter2D(Collider2D collider)
     {
-        if (collider.tag != "Player")
+        if (collider.tag != "Player" && collider.name != "Projectile")
         {
             velocity.y = -3f;
             dying = true;

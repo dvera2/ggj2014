@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 
 public class Projectile : MonoBehaviour {
-    public float speed = 10f;
+    public float speed = -15f;
 
 	// Use this for initialization
 	void Start () {
-        rigidbody2D.velocity = new Vector2(speed, Random.Range(0f, 5f));
+        rigidbody2D.velocity = new Vector2(speed, Random.Range(0f, 10f));
 	}
 
     void Update()
     {
-        if (rigidbody2D.velocity.x < .005f)
+        if (System.Math.Abs(rigidbody2D.velocity.x) < .005f)
             Destroy(gameObject);
     }
 }
