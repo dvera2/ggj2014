@@ -4,17 +4,25 @@ using System.Collections;
 public class StateManager : MonoBehaviour {
 
     protected StateManager() {}
-    
-    static string currentlevel = "Level1";
 
     public static void changeLevel(string s)
     {
         Application.LoadLevel(s);
-        currentlevel = s;
+    }
+
+    public static void nextLevel()
+    {
+        string level = getCurrentLevel();
+        if (level == "MainMenu") changeLevel("Level1");
+        else if (level == "Level1") changeLevel("Level2");
+        else if (level == "Level2") changeLevel("Level3");
+        else if (level == "Level3") changeLevel("Level4");
+        else if (level == "Level4") changeLevel("Level5");
+        else if (level == "Level5") changeLevel("Level6");
     }
 
     public static string getCurrentLevel()
     {
-        return currentlevel;
+        return Application.loadedLevelName;
     }
 }

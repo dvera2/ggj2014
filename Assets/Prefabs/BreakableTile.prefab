@@ -66,8 +66,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7946f74f499c35a46a1eb192c92c58b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakTime: .5
-  particleSystemPrefab: {fileID: 0}
+  breakTime: 2
+  particleSystemPrefab: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
