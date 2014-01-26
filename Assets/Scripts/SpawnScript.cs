@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SpawnScript : MonoBehaviour {
 
-	public GameObject player;
+	public static GameObject player;
 	public static Vector3 spawnpos;
 
 	// Use this for initialization
@@ -24,6 +24,6 @@ public class SpawnScript : MonoBehaviour {
 		sets the player's position to spawnpos
 	 */
 	public static void levelReset(){
-		player.transform.TransformPoint (spawnpos);
+		player.transform.position = spawnpos;
 	}
 }
