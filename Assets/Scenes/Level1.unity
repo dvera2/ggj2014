@@ -8654,7 +8654,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 23af0b38c59865142b221330d523b526, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 9d1e4d589dfaef443883720d933f9727, type: 3}
   m_Color: {r: .357482672, g: .627422154, b: .852941155, a: 1}
 --- !u!4 &754179745
 Transform:
@@ -8664,7 +8664,7 @@ Transform:
   m_GameObject: {fileID: 754179740}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 72.9657745, y: 7.55571747, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: .200000003, y: .200000003, z: .200000003}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &771383387
@@ -9960,7 +9960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3867d280833822449dbfa0a383d875d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleSystemPrefab: {fileID: 100000, guid: 22e45c8ae7cea264aa6ad81a0c7037e9, type: 2}
+  particleSystemPrefab: {fileID: 100000, guid: b2c10a6cef1a0fd4d8d108d163b53273, type: 2}
 --- !u!114 &871130704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10008,7 +10008,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 23af0b38c59865142b221330d523b526, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d1e4d589dfaef443883720d933f9727, type: 3}
   m_Color: {r: .860294104, g: .654381931, b: .113862462, a: 1}
 --- !u!4 &871130707
 Transform:
@@ -10018,7 +10018,7 @@ Transform:
   m_GameObject: {fileID: 871130702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 49.696209, y: 8.11558342, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: .200000003, y: .200000003, z: .200000003}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &876048807
@@ -16534,7 +16534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3867d280833822449dbfa0a383d875d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleSystemPrefab: {fileID: 100000, guid: 22e45c8ae7cea264aa6ad81a0c7037e9, type: 2}
+  particleSystemPrefab: {fileID: 100000, guid: b2c10a6cef1a0fd4d8d108d163b53273, type: 2}
 --- !u!114 &1329348813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16582,7 +16582,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 23af0b38c59865142b221330d523b526, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d1e4d589dfaef443883720d933f9727, type: 3}
   m_Color: {r: .860294104, g: .654381931, b: .113862462, a: 1}
 --- !u!4 &1329348816
 Transform:
@@ -16592,7 +16592,7 @@ Transform:
   m_GameObject: {fileID: 1329348811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 46.849659, y: 8.18498707, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: .200000003, y: .200000003, z: .200000003}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &1341987286
@@ -21458,7 +21458,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 23af0b38c59865142b221330d523b526, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 9d1e4d589dfaef443883720d933f9727, type: 3}
   m_Color: {r: .357482672, g: .627422154, b: .852941155, a: 1}
 --- !u!4 &1697301600
 Transform:
@@ -21468,7 +21468,7 @@ Transform:
   m_GameObject: {fileID: 1697301595}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 70.9545898, y: 7.51102448, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: .200000003, y: .200000003, z: .200000003}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &1699614226
