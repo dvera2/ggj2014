@@ -9960,7 +9960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3867d280833822449dbfa0a383d875d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleSystemPrefab: {fileID: 100000, guid: b2c10a6cef1a0fd4d8d108d163b53273, type: 2}
+  particleSystemPrefab: {fileID: 100000, guid: 22e45c8ae7cea264aa6ad81a0c7037e9, type: 2}
 --- !u!114 &871130704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16534,7 +16534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3867d280833822449dbfa0a383d875d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleSystemPrefab: {fileID: 100000, guid: b2c10a6cef1a0fd4d8d108d163b53273, type: 2}
+  particleSystemPrefab: {fileID: 100000, guid: 22e45c8ae7cea264aa6ad81a0c7037e9, type: 2}
 --- !u!114 &1329348813
 MonoBehaviour:
   m_ObjectHideFlags: 0
