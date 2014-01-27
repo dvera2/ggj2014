@@ -38,6 +38,8 @@ public class Credits : MonoBehaviour {
 		AddTitle ("SPECIAL THANKS");
 		AddTabs(2);
 		AddName ("Wilfred Brimley");
+
+        StartCoroutine(LaunchEasterEgg());
 	}
 
 	void AddTitle(string title)
@@ -64,4 +66,10 @@ public class Credits : MonoBehaviour {
 	void Update () {
 		transform.Translate(Vector3.left * Time.deltaTime * 0.1f);
 	}
+
+    IEnumerator LaunchEasterEgg()
+    {
+        yield return new WaitForSeconds(40.0f);
+        Application.LoadLevel("EasterEgg");
+    }
 }

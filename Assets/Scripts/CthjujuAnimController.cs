@@ -6,7 +6,8 @@ public class CthjujuAnimController : MonoBehaviour {
 	public enum ActionState {
 		Idle,
 		Attack,
-		Die
+		Die,
+		WhatIsLove
 	}
 
 	public Animator animator;
@@ -56,6 +57,9 @@ public class CthjujuAnimController : MonoBehaviour {
 			break;
 		case ActionState.Die:
 			trigger = "Die";
+			break;
+		case ActionState.WhatIsLove:
+			trigger = "WhatIsLove";
 			break;
 		}
 		
