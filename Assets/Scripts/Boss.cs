@@ -32,6 +32,7 @@ public class Boss : MonoBehaviour {
         {
             velocity.y = -.5f;
             dying = true;
+            (GameObject.FindGameObjectWithTag("Player").GetComponent<Character>()).forceSmall();
             GetComponentInChildren<CthjujuAnimController>().actionState = CthjujuAnimController.ActionState.Die;
         }
     }
