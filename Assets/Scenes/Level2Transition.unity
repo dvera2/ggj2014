@@ -115,7 +115,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 96c703f0c4cf6004982514812e7ea2b0, type: 2}
       propertyPath: IntroQuote
-      value: But the King felt all was not well...
+      value: His friends would even call him "The King of Candy"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 96c703f0c4cf6004982514812e7ea2b0, type: 2}
@@ -150,8 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82bf85b6359fa294bb8cb6055de75552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IntroQuote: But the King felt all was not well...
-  LevelString: Level3
+  IntroQuote: His friends would even call him "The King of Candy"
   quoteStyle:
     m_Name: 
     m_Normal:

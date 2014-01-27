@@ -39,5 +39,9 @@ public class Boss : MonoBehaviour {
             (GameObject.FindGameObjectWithTag("Player").GetComponent<Character>()).forceSmall();
             GetComponentInChildren<CthjujuAnimController>().actionState = CthjujuAnimController.ActionState.Die;
         }
+        else if(collider.tag == "Player")
+        {
+            collider.GetComponent<PlayerDeath>().die();
+        }
     }
 }
