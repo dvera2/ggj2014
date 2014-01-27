@@ -1935,6 +1935,7 @@ MonoBehaviour:
   behavior: 0
   paceDistance: 3
   particleSystemPrefab: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
+  deathAudioClip: {fileID: 8300000, guid: e9abfc92774f5584891fd5f32993b458, type: 3}
 --- !u!50 &95896424
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -4973,7 +4974,7 @@ MonoBehaviour:
   moveSpeedSmall: 5
   jumpSpeedMedium: 6.5
   moveSpeedMedium: 4
-  jumpSpeedLarge: 5
+  jumpSpeedLarge: 5.5
   moveSpeedLarge: 2
   baseHeight: 0
   jumpAudio: {fileID: 8300000, guid: 8eca8b9d1d5a6b242b7f96f6fbdba13e, type: 3}
@@ -20077,6 +20078,7 @@ MonoBehaviour:
   behavior: 0
   paceDistance: 1.5
   particleSystemPrefab: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
+  deathAudioClip: {fileID: 8300000, guid: e9abfc92774f5584891fd5f32993b458, type: 3}
 --- !u!50 &965260387
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -40990,6 +40992,10 @@ Prefab:
     - target: {fileID: 400016, guid: 2b53d12726e945b458f56a902c1c1ae3, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 2b53d12726e945b458f56a902c1c1ae3, type: 2}
+      propertyPath: jumpSpeedLarge
+      value: 5.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b53d12726e945b458f56a902c1c1ae3, type: 2}
