@@ -366,6 +366,9 @@ MonoBehaviour:
   jumpSpeedLarge: 5
   moveSpeedLarge: 2
   baseHeight: 0
+  jumpAudio: {fileID: 0}
+  growAudio: {fileID: 0}
+  shrinkAudio: {fileID: 0}
   size: 0
 --- !u!114 &11400004
 MonoBehaviour:
@@ -382,6 +385,7 @@ MonoBehaviour:
   behavior: 0
   paceDistance: 3
   particleSystemPrefab: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
+  deathAudioClip: {fileID: 8300000, guid: e9abfc92774f5584891fd5f32993b458, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

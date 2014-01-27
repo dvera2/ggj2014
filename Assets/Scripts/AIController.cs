@@ -20,6 +20,7 @@ public class AIController : MonoBehaviour
     private float startX;
     public GameObject particleSystemPrefab;
     private GameObject activeParticles;
+	public AudioClip deathAudioClip;
 
 	// Use this for initialization
     void Start()
@@ -112,6 +113,8 @@ public class AIController : MonoBehaviour
                     GetComponentInChildren<SchnopAnimController>().actionState = SchnopAnimController.ActionState.Die;
                     GameObject.Destroy(gameObject, .5f);
                 }
+
+				contact.collider.GetComponent<AudioSource>().PlayOneShot(deathAudioClip);
             }
             else if (contact.collider.tag == "Player")
             {
