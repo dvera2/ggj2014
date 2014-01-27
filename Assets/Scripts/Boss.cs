@@ -30,7 +30,7 @@ public class Boss : MonoBehaviour {
     {
         if (collider.tag != "Player" && collider.name != "Projectile")
         {
-            velocity.y = -.5f;
+            velocity.y = -.01f;
             dying = true;
             (GameObject.FindGameObjectWithTag("Player").GetComponent<Character>()).forceSmall();
             GetComponentInChildren<CthjujuAnimController>().actionState = CthjujuAnimController.ActionState.Die;
