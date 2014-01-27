@@ -3677,6 +3677,7 @@ MonoBehaviour:
   behavior: 0
   paceDistance: 3
   particleSystemPrefab: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
+  deathAudioClip: {fileID: 8300000, guid: e9abfc92774f5584891fd5f32993b458, type: 3}
 --- !u!50 &222185474
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -5248,6 +5249,7 @@ MonoBehaviour:
   behavior: 0
   paceDistance: 1
   particleSystemPrefab: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
+  deathAudioClip: {fileID: 8300000, guid: e9abfc92774f5584891fd5f32993b458, type: 3}
 --- !u!50 &327031988
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -22588,6 +22590,7 @@ MonoBehaviour:
   behavior: 0
   paceDistance: 2
   particleSystemPrefab: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
+  deathAudioClip: {fileID: 8300000, guid: e9abfc92774f5584891fd5f32993b458, type: 3}
 --- !u!50 &1416407290
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -26381,6 +26384,7 @@ GameObject:
   - 92: {fileID: 1648333133}
   - 81: {fileID: 1648333132}
   - 114: {fileID: 1648333131}
+  - 82: {fileID: 1648333135}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -26459,6 +26463,64 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_HDR: 0
   m_OcclusionCulling: 1
+--- !u!82 &1648333135
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1648333129}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: c52f79884644a344fa2bf1426ed357d3, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1652114297
 GameObject:
   m_ObjectHideFlags: 0
@@ -27584,6 +27646,7 @@ MonoBehaviour:
   behavior: 0
   paceDistance: 3
   particleSystemPrefab: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
+  deathAudioClip: {fileID: 8300000, guid: e9abfc92774f5584891fd5f32993b458, type: 3}
 --- !u!50 &1762938884
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -29329,6 +29392,7 @@ MonoBehaviour:
   behavior: 0
   paceDistance: 2
   particleSystemPrefab: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
+  deathAudioClip: {fileID: 8300000, guid: e9abfc92774f5584891fd5f32993b458, type: 3}
 --- !u!50 &1858487558
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -33146,6 +33210,7 @@ MonoBehaviour:
   behavior: 0
   paceDistance: 2
   particleSystemPrefab: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
+  deathAudioClip: {fileID: 8300000, guid: e9abfc92774f5584891fd5f32993b458, type: 3}
 --- !u!50 &2077802525
 Rigidbody2D:
   m_ObjectHideFlags: 0
