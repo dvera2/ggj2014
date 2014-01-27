@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour {
 
 		if(Input.anyKey)
 		{
-			StateManager.changeLevel("Level1");
+			StateManager.nextLevel();
 		}
 	
 	}
