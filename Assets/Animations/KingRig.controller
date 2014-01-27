@@ -90,8 +90,8 @@ Transition:
   m_TransitionDuration: .100000001
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 1
+    m_ConditionEvent: Twitch
     m_EventTreshold: 0
     m_ExitTime: .899999976
   m_Atomic: 1
@@ -126,8 +126,8 @@ Transition:
   m_TransitionDuration: .100000001
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 1
+    m_ConditionEvent: Love
     m_EventTreshold: 0
     m_ExitTime: .899999976
   m_Atomic: 1
@@ -220,7 +220,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: King_Love
-  m_Speed: 1
+  m_Speed: .600000024
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: b95992c526578d5418ab55f938ad4550, type: 2}
@@ -238,7 +238,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 0}
+  - {fileID: 7400000, guid: b95992c526578d5418ab55f938ad4550, type: 2}
   m_ParentStateMachine: {fileID: 110713545}
   m_Position: {x: 264, y: 48, z: 0}
   m_IKOnFeet: 0

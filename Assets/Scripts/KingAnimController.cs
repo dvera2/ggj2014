@@ -13,7 +13,8 @@ public class KingAnimController : MonoBehaviour {
 	}
 
 	public enum EmoState {
-		Twitch
+		Twitch,
+		Love
 	}
 
 	public ActionState actionState = ActionState.Idle;
@@ -59,6 +60,7 @@ public class KingAnimController : MonoBehaviour {
 			trigger = "Walk";
 			break;
 		case ActionState.WhatIsLove:
+			trigger = "Love";
 			break;
 		}
 
@@ -71,6 +73,9 @@ public class KingAnimController : MonoBehaviour {
 		switch(emoState) {
 		case EmoState.Twitch:
 			trigger = "Twitch";
+			break;
+		case EmoState.Love:
+			trigger = "Love";
 			break;
 		}
 
