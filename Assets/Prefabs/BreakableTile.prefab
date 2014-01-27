@@ -68,6 +68,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakTime: 2
   particleSystemPrefab: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
+  crumbleAudio: {fileID: 8300000, guid: 66080983d585de7498104af6111f5255, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
