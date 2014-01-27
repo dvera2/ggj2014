@@ -733,7 +733,7 @@ MonoBehaviour:
   - {fileID: 21300084, guid: 715bda9116242474b9cb27757aa0fe49, type: 3}
   - {fileID: 21300086, guid: 715bda9116242474b9cb27757aa0fe49, type: 3}
   - {fileID: 21300088, guid: 715bda9116242474b9cb27757aa0fe49, type: 3}
-  IntroQuote: 'TODO: this text'
+  IntroQuote: His world had become candy, and it was crashing in.
   generateSet: 0
   quoteStyle:
     m_Name: 
@@ -1158,7 +1158,7 @@ AudioSource:
   m_GameObject: {fileID: 418541830}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: c52f79884644a344fa2bf1426ed357d3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6961518a800c64644a82554c6042b6ec, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -4937,6 +4937,7 @@ GameObject:
   - 4: {fileID: 2031538242}
   - 114: {fileID: 2031538244}
   - 61: {fileID: 2031538243}
+  - 82: {fileID: 2031538245}
   m_Layer: 0
   m_Name: Cthulu
   m_TagString: Enemy
@@ -4982,6 +4983,66 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileDelay: 2
   projectile: {fileID: 400000, guid: 9364af93ebd88d740836c84a234686e3, type: 2}
+  spitSound: {fileID: 8300000, guid: 1f3b62b6bddb54a4a841722cf6ce61aa, type: 3}
+--- !u!82 &2031538245
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8200000, guid: e54139d2435ecf64998eeac98c3e22c0,
+    type: 2}
+  m_PrefabInternal: {fileID: 2046031554}
+  m_GameObject: {fileID: 2031538241}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &2046031554
 Prefab:
   m_ObjectHideFlags: 0

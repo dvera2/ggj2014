@@ -6,6 +6,8 @@ public class Boss : MonoBehaviour {
     public Transform projectile;
     private bool dying = false;
     private Vector2 velocity = new Vector2(0f, 0f);
+
+	public AudioClip spitSound;
 	
     // Update is called once per frame
     void Update () {
@@ -15,6 +17,8 @@ public class Boss : MonoBehaviour {
             delayTimer = 0f;
             Instantiate(projectile, new Vector3(transform.position.x - 2.5f, transform.position.y + 2f, 0f), Quaternion.identity);
             GetComponentInChildren<CthjujuAnimController>().actionState = CthjujuAnimController.ActionState.Attack;
+
+			GetComponent<AudioSource>().PlayOneShot(spitSound);
         }
         if (!dying && delayTimer >= projectileDelay / 4)
         {
