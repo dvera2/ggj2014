@@ -14523,6 +14523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakTime: 2
   particleSystemPrefab: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
+  crumbleAudio: {fileID: 8300000, guid: 66080983d585de7498104af6111f5255, type: 3}
 --- !u!61 &667440943
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25399,6 +25400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakTime: 2
   particleSystemPrefab: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
+  crumbleAudio: {fileID: 8300000, guid: 66080983d585de7498104af6111f5255, type: 3}
 --- !u!61 &1259763154
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33438,6 +33440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakTime: 2
   particleSystemPrefab: {fileID: 100000, guid: aef3528b3ee45d64d913114d634cfcfb, type: 2}
+  crumbleAudio: {fileID: 8300000, guid: 66080983d585de7498104af6111f5255, type: 3}
 --- !u!61 &1643718108
 BoxCollider2D:
   m_ObjectHideFlags: 0
