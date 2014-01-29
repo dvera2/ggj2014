@@ -147,6 +147,7 @@ public class Character : MonoBehaviour {
 
     public void makeThinner()
     {
+		Debug.Log ("Shrinking..");
         if (size == Size.LARGE) changeSize(Size.MEDIUM);
         else if (size == Size.MEDIUM) changeSize(Size.SMALL);
         else if (size == Size.SMALL) GetComponent<PlayerDeath>().die();
@@ -156,6 +157,7 @@ public class Character : MonoBehaviour {
 
     public void makeFatter()
     {
+		Debug.Log ("Growing..");
         if (size == Size.SMALL) changeSize(Size.MEDIUM);
         else if (size == Size.MEDIUM) changeSize(Size.LARGE);
         else if (size == Size.LARGE) GetComponent<PlayerDeath>().die();

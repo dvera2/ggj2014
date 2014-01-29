@@ -32,7 +32,7 @@ public class PickupListener : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.tag == "Player" && gameObject.renderer.enabled)
+        if (collider.tag == "Player" && gameObject.renderer.enabled && !disablerenderernext)
         {
             //GameObject.Destroy(gameObject);
             disablerenderernext = true;

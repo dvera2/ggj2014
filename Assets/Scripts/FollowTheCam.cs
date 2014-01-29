@@ -18,7 +18,7 @@ public class FollowTheCam : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void LateUpdate () {
+	void FixedUpdate () {
 		float z = transform.position.z;
 		var pos = cam.transform.position;
 		pos.z = z;

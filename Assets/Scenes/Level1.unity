@@ -10663,7 +10663,16 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11400008, guid: 2b53d12726e945b458f56a902c1c1ae3, type: 2}
+      propertyPath: camSizeSmall
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 2b53d12726e945b458f56a902c1c1ae3, type: 2}
+      propertyPath: camSizeLarge
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11400012, guid: 2b53d12726e945b458f56a902c1c1ae3, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2b53d12726e945b458f56a902c1c1ae3, type: 2}
   m_RootGameObject: {fileID: 1614399923}
   m_IsPrefabParent: 0
@@ -33186,7 +33195,6 @@ GameObject:
   - 212: {fileID: 1614399927}
   - 82: {fileID: 1614399931}
   - 114: {fileID: 1614399933}
-  - 114: {fileID: 1614399932}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -33365,22 +33373,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &1614399932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400012, guid: 2b53d12726e945b458f56a902c1c1ae3,
-    type: 2}
-  m_PrefabInternal: {fileID: 549410685}
-  m_GameObject: {fileID: 1614399923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51962a9079c534ef4a4fca394b1d60d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camSizeSmall: 3
-  camSizeMedium: 3
-  camSizeLarge: 3
-  resizeTime: 1
 --- !u!114 &1614399933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33393,9 +33385,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51962a9079c534ef4a4fca394b1d60d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camSizeSmall: 3.5
+  camSizeSmall: 4
   camSizeMedium: 5
-  camSizeLarge: 7
+  camSizeLarge: 6
   resizeTime: 1
 --- !u!1 &1614426396
 GameObject:
