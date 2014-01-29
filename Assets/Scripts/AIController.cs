@@ -22,6 +22,8 @@ public class AIController : MonoBehaviour
     private GameObject activeParticles;
 	public AudioClip deathAudioClip;
 
+	public bool seekPlayer = true;
+
 	// Use this for initialization
     void Start()
     {
@@ -35,8 +37,13 @@ public class AIController : MonoBehaviour
         float movement = 1;
         if (direction == Direction.LEFT) movement = -1;
         if (behavior != Behavior.PACE) movement *= 1.5f;
-        if (Math.Abs(transform.position.x - GameObject.Find("Player").transform.position.x) < 30f)
-            character.move(movement);
+
+		if(seekPlayer) {
+	        if (Math.Abs(transform.position.x - GameObject.Find("Player").transform.position.x) < 30f)
+	            character.move(movement);
+		} else {
+			character.move (movement);
+		}
 
         if (behavior == Behavior.WALKFORWARD)
         {
@@ -75,17 +82,23 @@ public class AIController : MonoBehaviour
                 direction = Direction.RIGHT;
             }
         }
-        if (GameObject.Find("Player").GetComponent<Character>().size == Character.Size.LARGE)
-            GetComponentInChildren<SchnopAnimController>().emoState = SchnopAnimController.EmoState.Scared;
-        if (GameObject.Find("Player").GetComponent<Character>().size == Character.Size.MEDIUM)
-            GetComponentInChildren<SchnopAnimController>().emoState = SchnopAnimController.EmoState.Neutral;
-        if (GameObject.Find("Player").GetComponent<Character>().size == Character.Size.SMALL)
-            GetComponentInChildren<SchnopAnimController>().emoState = SchnopAnimController.EmoState.Mad;
 
-        if (Math.Abs(GameObject.Find("Player").transform.position.x - transform.position.x) < 8f &&
-            GameObject.Find("Player").GetComponent<Character>().size == Character.Size.LARGE) behavior = Behavior.RUN;
-        else if (Math.Abs(GameObject.Find("Player").transform.position.x - transform.position.x) < 4f) behavior = Behavior.CHASE;
-        else behavior = Behavior.PACE;
+		var playerCharacter = GameObject.Find("Player").GetComponent<Character>();
+
+		if(playerCharacter) {
+
+			if (playerCharacter.size == Character.Size.LARGE)
+	            GetComponentInChildren<SchnopAnimController>().emoState = SchnopAnimController.EmoState.Scared;
+			if (playerCharacter.size == Character.Size.MEDIUM)
+	            GetComponentInChildren<SchnopAnimController>().emoState = SchnopAnimController.EmoState.Neutral;
+			if (playerCharacter.size == Character.Size.SMALL)
+	            GetComponentInChildren<SchnopAnimController>().emoState = SchnopAnimController.EmoState.Mad;
+
+	        if (Math.Abs(GameObject.Find("Player").transform.position.x - transform.position.x) < 8f &&
+	            GameObject.Find("Player").GetComponent<Character>().size == Character.Size.LARGE) behavior = Behavior.RUN;
+	        else if (Math.Abs(GameObject.Find("Player").transform.position.x - transform.position.x) < 4f) behavior = Behavior.CHASE;
+	        else behavior = Behavior.PACE;
+		}
 	}
 
     void OnDisable()
@@ -98,6 +111,10 @@ public class AIController : MonoBehaviour
     {
         foreach (ContactPoint2D contact in collision.contacts)
         {
+			if(contact.collider.tag == "Enemy") {
+				direction = (direction == Direction.LEFT ? Direction.RIGHT : Direction.LEFT);
+			}
+
             if (contact.collider.tag == "Player" && contact.collider.GetComponent<Character>().baseHeight > transform.position.y)
             {
                 if (activeParticles != null)

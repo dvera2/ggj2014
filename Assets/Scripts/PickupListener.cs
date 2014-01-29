@@ -17,10 +17,18 @@ public class PickupListener : MonoBehaviour
         if (disablerenderernext)
         {
             disablerenderernext = false;
-            gameObject.renderer.enabled = false;
+            SetShouldRender(false);
         }
 
     }
+
+	void SetShouldRender(bool shouldRender) {
+		gameObject.renderer.enabled = shouldRender;
+		var drawers = GetComponentsInChildren<Renderer>();
+		foreach(var d in drawers) {
+			d.enabled = shouldRender;
+		}
+	}
 
     void OnTriggerEnter2D(Collider2D collider)
     {
@@ -35,6 +43,6 @@ public class PickupListener : MonoBehaviour
 
     public void refresh()
     {
-        gameObject.renderer.enabled = true;
+        SetShouldRender(true);
     }
 }

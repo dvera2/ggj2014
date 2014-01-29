@@ -24,6 +24,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level4.unity
   - enabled: 1
-    path: Assets/Scenes/Credits.unity
+    path: Assets/Scenes/Ending.unity
   - enabled: 1
-    path: Assets/Scenes/EasterEgg.unity
+    path: Assets/Scenes/Credits.unity

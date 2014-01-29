@@ -17,6 +17,8 @@ public class Character : MonoBehaviour {
     float boxSizeMedium = 1.9f;
     float boxSizeLarge = 2.9f;
     float resizeRate = 0.01f;
+
+
     public float baseHeight;
 
     float moveSpeed;
@@ -35,7 +37,7 @@ public class Character : MonoBehaviour {
     {
         moveSpeed = moveSpeedSmall;
         jumpSpeed = jumpSpeedSmall;
-        //GameObject.Instantiate(checkpointTemplate, new Vector3(transform.position.x - 2, transform.position.y - 2, transform.position.z), Quaternion.identity);
+		//GameObject.Instantiate(checkpointTemplate, new Vector3(transform.position.x - 2, transform.position.y - 2, transform.position.z), Quaternion.identity);
     }
     public Size size;
 
@@ -61,8 +63,12 @@ public class Character : MonoBehaviour {
 
         if (resizing)
         {
-            if (gettingbigger) b.transform.localScale = new Vector2((Math.Abs(b.transform.localScale.x) + resizeRate) * facing, b.transform.localScale.y + resizeRate);
-            else b.transform.localScale = new Vector2((Math.Abs(b.transform.localScale.x) - resizeRate) * facing, b.transform.localScale.y - resizeRate);
+            if (gettingbigger) {
+				b.transform.localScale = new Vector2((Math.Abs(b.transform.localScale.x) + resizeRate) * facing, b.transform.localScale.y + resizeRate);				
+			}
+            else {
+				b.transform.localScale = new Vector2((Math.Abs(b.transform.localScale.x) - resizeRate) * facing, b.transform.localScale.y - resizeRate);
+			}
             baseHeight = transform.position.y - (b.transform.localScale.y / 2);
 
             if (size == Size.LARGE && Math.Abs(b.transform.localScale.x) >= boxSizeLarge)

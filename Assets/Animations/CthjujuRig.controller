@@ -177,7 +177,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Love
-  m_Speed: .600000024
+  m_Speed: .574999988
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 2de65e563a087a0489d958af22241094, type: 2}

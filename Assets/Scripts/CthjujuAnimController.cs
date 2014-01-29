@@ -78,4 +78,13 @@ public class CthjujuAnimController : MonoBehaviour {
 		//if (!string.IsNullOrEmpty (trigger)) 
 		//	animator.SetTrigger (trigger);
 	}
+
+	public void SetEyeLevel(float normLevel) {
+		float level = Mathf.Clamp(normLevel, -1.0f, 1.0f);
+
+	}
+
+	void WhatIsLove() {
+		actionState = ActionState.WhatIsLove;
+	}
 }

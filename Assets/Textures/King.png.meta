@@ -77,5 +77,23 @@ TextureImporter:
         height: 453
       alignment: 9
       pivot: {x: .477000505, y: .780510783}
+    - name: King_LEyeLid
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 935
+        width: 94
+        height: 69
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: King_REyeLid
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 916
+        width: 70
+        height: 73
+      alignment: 0
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 

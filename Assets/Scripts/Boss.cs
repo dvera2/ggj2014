@@ -27,6 +27,7 @@ public class Boss : MonoBehaviour {
         else if (dying)
         {;
             transform.Translate(velocity);
+			Camera.main.camera.GetComponent<CameraFollow>().target = GameObject.FindGameObjectWithTag("Player").transform;
         }
 	}
 

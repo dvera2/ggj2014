@@ -82,4 +82,9 @@ public class KingAnimController : MonoBehaviour {
 		if (!string.IsNullOrEmpty (trigger)) 
 			animator.SetTrigger (trigger);
 	}
+
+	void WhatIsLove() {
+		actionState = ActionState.WhatIsLove;
+		emoState = EmoState.Love;
+	}
 }

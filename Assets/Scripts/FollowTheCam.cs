@@ -4,8 +4,13 @@ using System.Collections;
 public class FollowTheCam : MonoBehaviour {
 	public Camera cam;
 
+	private Vector3 origPos;
+
 	// Use this for initialization
 	void Start () {
+
+		origPos = transform.position;
+
 		if (!cam) {
 			var obj = GameObject.FindGameObjectWithTag ("MainCamera");
 			if(obj) cam = obj.GetComponent<Camera>();
