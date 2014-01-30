@@ -120,14 +120,14 @@ Transition:
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
---- !u!1101 &110154950
+--- !u!1101 &110175250
 Transition:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_SrcState: {fileID: 0}
-  m_DstState: {fileID: 110233032}
+  m_DstState: {fileID: 110276674}
   m_TransitionDuration: .100000001
   m_TransitionOffset: 0
   m_Conditions:
@@ -162,7 +162,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Cthjuju_Idle
-  m_Speed: 1
+  m_Speed: .25
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 7dfe89f145b06b14daeb39c437e047e2, type: 2}
@@ -182,7 +182,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: 2de65e563a087a0489d958af22241094, type: 2}
   m_ParentStateMachine: {fileID: 110737891}
-  m_Position: {x: 396, y: 12, z: 0}
+  m_Position: {x: 408, y: -24, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -212,7 +212,22 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: 320f076fe3e023348803b2854abced9d, type: 2}
   m_ParentStateMachine: {fileID: 110737891}
-  m_Position: {x: -48, y: 60, z: 0}
+  m_Position: {x: -108, y: 48, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110276674
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Idle
+  m_Speed: .400000006
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 1bd0e34d7f9ae45ad97e15eb55169b0d, type: 2}
+  m_ParentStateMachine: {fileID: 110737891}
+  m_Position: {x: 492, y: 72, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -227,7 +242,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: 8e36265422fb2ea49bf493f9e3d57841, type: 2}
   m_ParentStateMachine: {fileID: 110737891}
-  m_Position: {x: 204, y: 60, z: 0}
+  m_Position: {x: 252, y: 72, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -282,6 +297,7 @@ StateMachine:
   - {fileID: 110295476}
   - {fileID: 110233032}
   - {fileID: 110215004}
+  - {fileID: 110276674}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
@@ -290,8 +306,8 @@ StateMachine:
       second:
       - {fileID: 110108779}
       - {fileID: 110124344}
-      - {fileID: 110154950}
       - {fileID: 110193200}
+      - {fileID: 110175250}
     data:
       first: {fileID: 110240690}
       second: []

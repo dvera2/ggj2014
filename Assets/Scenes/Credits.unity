@@ -2500,7 +2500,7 @@ GameObject:
   - 4: {fileID: 1889198509}
   - 212: {fileID: 1889198510}
   m_Layer: 0
-  m_Name: Cthjuju_Pup_Norm
+  m_Name: Cthjuju_Pupils
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2704,7 +2704,7 @@ GameObject:
   - 4: {fileID: 2006313113}
   - 212: {fileID: 2006313114}
   m_Layer: 0
-  m_Name: Cthjuju_Brow
+  m_Name: Cthjuju_RBrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2716,7 +2716,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 329a1d7189216ea44a7a67e7fcf12d54, type: 2}
   m_PrefabInternal: {fileID: 546598707}
   m_GameObject: {fileID: 2006313112}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: .00548482267, w: .99998498}
   m_LocalPosition: {x: -.195745289, y: .943135738, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
